@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APAC-CAN Cultural Quiz</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --success: #16a34a;
+            --text: #334155;
+            --bg: #f8fafc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+        .card { background: white; width: 100%; max-width: 500px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: var(--primary); font-size: 24px; margin-bottom: 8px; }
+        h2 { font-size: 14px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
+        .btn { background: var(--accent); color: white; border: none; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s; }
+        .btn:hover { background: #1d4ed8; }
+        .timer-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 24px; overflow: hidden; display: none; }
+        .timer-fill { height: 100%; width: 100%; background: #ef4444; transition: width 1s linear; }
+        .meta-info { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: #64748b; margin-bottom: 16px; display: none; }
+        .question-text { font-size: 18px; font-weight: 600; color: var(--primary); text-align: left; margin-bottom: 20px; line-height: 1.5; }
+        .options-grid { display: grid; gap: 12px; margin-bottom: 20px; }
+        .option-btn { background: #f1f5f9; border: 2px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: left; font-size: 15px; cursor: pointer; transition: all 0.15s; font-weight: 500; color: var(--text); }
+        .option-btn:hover { background: #e2e8f0; border-color: #cbd5e1; }
+        .badge { display: inline-block; padding: 12px 24px; border-radius: 50px; font-weight: 700; margin-top: 15px; font-size: 18px; }
+        .badge.win { background: #dcfce7; color: #15803d; border: 2px dashed #22c55e; }
+        .badge.lost { background: #fef3c7; color: #b45309; }
+    </style>
+</head>
+<body>
+
+<div class="card" id="quiz-card">
+    <div id="start-screen">
+        <h1>APAC-CAN</h1>
+        <h2>Cultural Awareness Network Quiz</h2>
+        <p style="margin-bottom: 24px; color: #475569; line-height: 1.6;">Test your knowledge on Indian culture, tricky state capitals, and APAC traditions! You have <b>1 minute</b> to tackle <b>15 random questions</b>. Score 10 or more to win a prize!</p>
+        <button class="btn" onclick="startQuiz()">Start Challenge</button>
+    </div>
+
+    <div class="meta-info" id="meta-info">
+        <span id="q-counter">Question 1/15</span>
+        <span id="timer-text">60s left</span>
+    </div>
+    <div class="timer-bar" id="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
+    <div id="question-container" style="display: none;">
+        <div class="question-text" id="question-text"></div>
+        <div class="options-grid" id="options-grid"></div>
+    </div>
+
+    <div id="result-screen" style="display: none;">
+        <h1>Challenge Finished!</h1>
+        <p style="font-size: 16px; margin: 16px 0 8px 0; color: #475569;">Your Final Score</p>
+        <div style="font-size: 48px; font-weight: 800; color: var(--primary);" id="final-score">0/15</div>
+        <div id="prize-badge"></div>
+        <button class="btn" style="margin-top: 30px; background: #64748b;" onclick="location.reload()">Next Player</button>
+    </div>
+</div>
+
+<script>
+    let allQuestions = [];
+    let gameQuestions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let timeLeft = 60;
+    let timerInterval;
+
+    async function startQuiz() {
+        try {
+            const response = await fetch('questions.json');
+            allQuestions = await response.json();
+            
+            // Absolute Shuffle and pick exactly 15 questions
+            gameQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
+            
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('meta-info').style.display = 'flex';
+            document.getElementById('timer-bar').style.display = 'block';
+            document.getElementById('question-container').style.display = 'block';
+            
+            showQuestion();
+            startTimer();
+        } catch (err) {
+            alert("Error loading questions. Make sure questions.json is in the same folder!");
+        }
+    }
+
+    function showQuestion() {
+        if (currentIdx >= gameQuestions.length) {
+            endQuiz();
+            return;
+        }
+        
+        document.getElementById('q-counter').innerText = `Question ${currentIdx + 1}/15`;
+        let qData = gameQuestions[currentIdx];
+        document.getElementById('question-text').innerText = qData.q;
+        
+        let grid = document.getElementById('options-grid');
+        grid.innerHTML = '';
+        
+        qData.a.forEach((opt, index) => {
+            let btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerText = opt;
+            btn.onclick = () => handleAnswer(index);
+            grid.appendChild(btn);
+        });
+    }
+
+    function handleAnswer(selectedIdx) {
+        if (selectedIdx === gameQuestions[currentIdx].c) {
+            score++;
+        }
+        currentIdx++;
+        showQuestion();
+    }
+
+    function startTimer() {
+        const fill = document.getElementById('timer-fill');
+        const txt = document.getElementById('timer-text');
+        
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            txt.innerText = `${timeLeft}s left`;
+            fill.style.width = `${(timeLeft / 60) * 100}%`;
+            
+            if (timeLeft <= 0) {
+                endQuiz();
+            }
+        }, 1000);
+    }
+
+    function endQuiz() {
+        clearInterval(timerInterval);
+        document.getElementById('meta-info').style.display = 'none';
+        document.getElementById('timer-bar').style.display = 'none';
+        document.getElementById('question-container').style.display = 'none';
+        
+        document.getElementById('final-score').innerText = `${score}/15`;
+        let badge = document.getElementById('prize-badge');
+        
+        if (score >= 10) {
+            badge.className = "badge win";
+            badge.innerText = "🎉 CLAIM YOUR GOODIE!";
+        } else {
+            badge.className = "badge lost";
+            badge.innerText = "Thank you for playing! ✨";
+        }
+        
+        document.getElementById('result-screen').style.display = 'block';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+[
+  {
+    "q": "The UNESCO-listed 'Great Living Chola Temples' are primarily associated with which Indian state?",
+    "a": ["Kerala", "Tamil Nadu", "Odisha", "Karnataka"],
+    "c": 1
+  },
+  {
+    "q": "'Bhakti' movement poetry in early Hindi is strongly associated with which saint-poet?",
+    "a": ["Kalidasa", "Tulsidas", "Bhasa", "Bharavi"],
+    "c": 1
+  },
+  {
+    "q": "The classical dance form Mohiniyattam originated in which Indian state?",
+    "a": ["Kerala", "Manipur", "Andhra Pradesh", "Rajasthan"],
+    "c": 0
+  },
+  {
+    "q": "The traditional 'Char Dham' pilgrimage circuit includes all of the following locations EXCEPT:",
+    "a": ["Badrinath", "Dwarka", "Rameswaram", "Vaishno Devi"],
+    "c": 3
+  },
+  {
+    "q": "The iconic Nataraja iconography (the dancing Shiva) is most historically linked to which temple town?",
+    "a": ["Madurai", "Chidambaram", "Thanjavur", "Kanchipuram"],
+    "c": 1
+  },
+  {
+    "q": "The Indian classical music tradition that heavily emphasizes melodic frameworks called 'ragas' is:",
+    "a": ["Only Carnatic", "Only Hindustani", "Both Hindustani and Carnatic", "Neither; it's folk-only"],
+    "c": 2
+  },
+  {
+    "q": "The classical stringed instrument known as the Santoor is traditionally associated with music from which region?",
+    "a": ["Punjab", "Kashmir", "Bengal", "Gujarat"],
+    "c": 1
+  },
+  {
+    "q": "The multi-day cultural celebration known as the Hornbill Festival is famously hosted in which state?",
+    "a": ["Assam", "Nagaland", "Mizoram", "Tripura"],
+    "c": 1
+  },
+  {
+    "q": "Pattachitra cloth scroll painting is a traditional, intricate art form native to:",
+    "a": ["Odisha", "Maharashtra", "Haryana", "Himachal Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "Which historical script is primarily utilized to write Sanskrit in most modern publications across North India?",
+    "a": ["Devanagari", "Gurmukhi", "Kannada", "Persian"],
+    "c": 0
+  },
+  {
+    "q": "The historic 13th-century Konark Sun Temple, designed as a colossal cosmic chariot, is located in:",
+    "a": ["Gujarat", "Odisha", "Madhya Pradesh", "Tamil Nadu"],
+    "c": 1
+  },
+  {
+    "q": "The luxury traditional wool textile known as Pashmina is most historically associated with:",
+    "a": ["Ladakh & Kashmir region", "Kutch region", "Konkan region", "Malabar region"],
+    "c": 0
+  },
+  {
+    "q": "Bihu, celebrated as a trio of distinct seasonal festivals throughout the year, is native to:",
+    "a": ["Assam", "Sikkim", "Bihar", "Goa"],
+    "c": 0
+  },
+  {
+    "q": "The ancient Tamil epic 'Silappatikaram' (The Tale of an Anklet) is attributed to which author?",
+    "a": ["Ilango Adigal", "Sattanar", "Kapilar", "Avvaiyar"],
+    "c": 0
+  },
+  {
+    "q": "The unique, bio-engineering cultural tradition of building 'living root bridges' belongs to which state?",
+    "a": ["Meghalaya", "Uttarakhand", "Rajasthan", "Telangana"],
+    "c": 0
+  },
+  {
+    "q": "The vibrant folk dance forms Garba and Dandiya Raas are most closely linked with which state?",
+    "a": ["Punjab", "Gujarat", "Odisha", "West Bengal"],
+    "c": 1
+  },
+  {
+    "q": "Kalaripayattu, widely cited among India's oldest surviving martial arts traditions, originates from:",
+    "a": ["Kerala", "Manipur", "Rajasthan", "Uttar Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "The intricate art of decorating thresholds with geometric rice flour designs is known as Kolam in:",
+    "a": ["Tamil Nadu", "Punjab", "Bihar", "Himachal Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "Yakshagana is a traditional, highly stylized night-long dance-drama form native to:",
+    "a": ["Karnataka", "Bihar", "Jammu & Kashmir", "Chhattisgarh"],
+    "c": 0
+  },
+  {
+    "q": "Which of the following is a traditional folk stringed instrument used by royal balladeers in Rajasthan?",
+    "a": ["Ektara", "Sarangi", "Ravanahatta", "Mridangam"],
+    "c": 2
+  },
+  {
+    "q": "The grand annual harvest festival of Onam in Kerala is linked to the legendary homecoming of:",
+    "a": ["Raja Harishchandra", "King Mahabali", "Prithviraj Chauhan", "Rana Sanga"],
+    "c": 1
+  },
+  {
+    "q": "Chhau, an energetic masked dance tradition featuring martial movements, is native to which eastern region?",
+    "a": ["Odisha, Jharkhand, West Bengal", "Kerala, Tamil Nadu, Karnataka", "Rajasthan, Gujarat, Maharashtra", "Punjab, Haryana, Himachal"],
+    "c": 0
+  },
+  {
+    "q": "The rock-cut Ajanta Caves in Maharashtra are globally celebrated primarily for their:",
+    "a": ["Bronze casting", "Preserved Buddhist murals and frescoes", "Stepwell architecture", "Intricate wooden temples"],
+    "c": 1
+  },
+  {
+    "q": "The monumental Brihadeeswara Temple at Thanjavur was commissioned by which prominent ruler?",
+    "a": ["Rajaraja Chola I", "Rajendra Chola I", "Karikala Chola", "Mahendravarman I"],
+    "c": 0
+  },
+  {
+    "q": "Bhangra, characterized by its powerful leaps and rhythmic dhol beats, has historical roots in the harvest celebrations of:",
+    "a": ["Kerala", "Punjab", "Assam", "Goa"],
+    "c": 1
+  },
+  {
+    "q": "The timeless Indian epic 'Ramayana' was originally composed in classical Sanskrit by which sage?",
+    "a": ["Valmiki", "Vyasa", "Tulsidas", "Kalidasa"],
+    "c": 0
+  },
+  {
+    "q": "The double-ikat weaving tradition resulting in highly prized, geometric luxury textiles known as Patola thrives in:",
+    "a": ["Gujarat", "Punjab", "Kerala", "Uttarakhand"],
+    "c": 0
+  },
+  {
+    "q": "Bastar Dhokra, a celebrated non-ferrous metal craft utilizing the lost-wax casting technique, is native to:",
+    "a": ["Chhattisgarh", "Rajasthan", "Sikkim", "Goa"],
+    "c": 0
+  },
+  {
+    "q": "The traditional regional New Year festival known as Ugadi is primarily celebrated across which states?",
+    "a": ["Gujarat and Maharashtra", "Karnataka, Andhra Pradesh, Telangana", "Assam and Meghalaya", "Punjab and Haryana"],
+    "c": 1
+  },
+  {
+    "q": "The core aesthetic literary concept of 'Rasa' (emotional flavors) is systematically detailed in which ancient text?",
+    "a": ["Natya Shastra", "Arthashastra", "Charaka Samhita", "Ashtadhyayi"],
+    "c": 0
+  },
+  {
+    "q": "Sattriya, recognized as one of India's official classical dance forms, was introduced by Saint Sankaradeva in:",
+    "a": ["Assam", "Bihar", "Madhya Pradesh", "Uttar Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "The iconic chickpea-flour sweet known as 'Mysore Pak' was historically created in the royal kitchens of:",
+    "a": ["Karnataka", "West Bengal", "Punjab", "Bihar"],
+    "c": 0
+  },
+  {
+    "q": "Hyderabadi Biryani and its distinct culinary styles evolved primarily within which historical geographic zone?",
+    "a": ["Awadh", "Deccan", "Konkan", "Mithila"],
+    "c": 1
+  },
+  {
+    "q": "Thewa, a highly skilled craft involving the fusing of intricate sheet gold filigree onto colored glass, is native to:",
+    "a": ["Rajasthan", "Nagaland", "Kerala", "Odisha"],
+    "c": 0
+  },
+  {
+    "q": "The satirical, music-heavy traditional folk theatre form known as Nautanki thrives primarily in:",
+    "a": ["Uttar Pradesh", "Kerala", "Sikkim", "Manipur"],
+    "c": 0
+  },
+  {
+    "q": "Which of the following regional languages does NOT structurally belong to the Dravidian language family?",
+    "a": ["Tamil", "Kannada", "Telugu", "Marathi"],
+    "c": 3
+  },
+  {
+    "q": "The sacred, meditative art of Thangka painting in India is preserved primarily across which Himalayan regions?",
+    "a": ["Sikkim, Ladakh, and Arunachal Pradesh", "Kutch and Saurashtra", "Malabar Coast", "Mewar and Bundi"],
+    "c": 0
+  },
+  {
+    "q": "The grand Kumbh Mela congregation rotates across four sacred riverbanks. Which of these is an official location?",
+    "a": ["Ujjain", "Darjeeling", "Shillong", "Coorg"],
+    "c": 0
+  },
+  {
+    "q": "The traditional Indian culinary tempering technique known as 'tadka' or 'chaunk' refers to:",
+    "a": ["Fermenting rice batter overnight", "Briefly roasting spices in sizzling hot fat to release essential oils", "Slow-charring grains over open clay fires", "Infusing raw meat with hot charcoal smoke"],
+    "c": 1
+  },
+  {
+    "q": "During the solar transit festival of Makar Sankranti, people in Maharashtra traditionally exchange 'Tilgul' along with which phrase?",
+    "a": ["Tilgul ghya, god god bola", "Aami pitha khabo", "Pongal Vaazhthukkal", "Happy Baisakhi"],
+    "c": 0
+  },
+  {
+    "q": "The four-day thanksgiving harvest festival of Pongal, featuring boiled milk and rice offerings, is native to:",
+    "a": ["Tamil Nadu", "Punjab", "Assam", "Odisha"],
+    "c": 0
+  },
+  {
+    "q": "The globally renowned, heavily brocaded traditional luxury textile known as Banarasi Silk originates from:",
+    "a": ["Varanasi", "Jaipur", "Kochi", "Bhopal"],
+    "c": 0
+  },
+  {
+    "q": "The cultural region of Mithila is globally recognized as the historic birthplace of which vibrant painting tradition?",
+    "a": ["Warli", "Madhubani", "Kalamkari", "Cheriyal"],
+    "c": 1
+  },
+  {
+    "q": "The term 'Gharana' within the context of Indian classical performing arts fundamentally denotes:",
+    "a": ["An ancient stringed instrument", "A distinct ideological lineage or style linked to a specific region", "A complex mathematical rhythm cycle", "A structural temple layout"],
+    "c": 1
+  },
+  {
+    "q": "The spectacular 11th-century Sun Temple at Modhera, famous for its grand geometric stepwell, is located in:",
+    "a": ["Rajasthan", "Odisha", "Gujarat", "Madhya Pradesh"],
+    "c": 2
+  },
+  {
+    "q": "Phulkari, an exquisite embroidery art style featuring dense darning stitches of bright silk on coarse cotton, is native to:",
+    "a": ["Gujarat", "Punjab", "West Bengal", "Karnataka"],
+    "c": 1
+  },
+  {
+    "q": "The monolithic Kailash Temple at Ellora, entirely carved top-down from a single solid rock hillside, was commissioned by which dynasty?",
+    "a": ["Rashtrakuta", "Pallava", "Chalukya", "Chola"],
+    "c": 0
+  },
+  {
+    "q": "Which austere, spiritual vocal style is considered the oldest surviving form of Hindustani classical music?",
+    "a": ["Khayal", "Thumri", "Dhrupad", "Ghazal"],
+    "c": 2
+  },
+  {
+    "q": "The historic Warli painting tradition utilizes dynamic patterns of circles, triangles, and squares made of white rice paste in:",
+    "a": ["Madhya Pradesh", "Maharashtra", "Bihar", "Rajasthan"],
+    "c": 1
+  },
+  {
+    "q": "Kalamkari, the intricate heritage style of hand-painting or block-printing textiles using organic dyes, primarily thrives in:",
+    "a": ["Andhra Pradesh", "Odisha", "West Bengal", "Punjab"],
+    "c": 0
+  },
+  {
+    "q": "Designed

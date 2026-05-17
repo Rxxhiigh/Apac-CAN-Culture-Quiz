@@ -1,502 +1,688 @@
 [
   {
-    "q": "Which iconic monument in Agra was built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal?",
-    "a": ["Qutub Minar", "Taj Mahal", "Red Fort", "Hawa Mahal"],
+    "q": "The UNESCO-listed 'Great Living Chola Temples' are primarily associated with which Indian state?",
+    "a": ["Kerala", "Tamil Nadu", "Odisha", "Karnataka"],
     "c": 1
   },
   {
-    "q": "What is the capital city of India?",
-    "a": ["Mumbai", "Kolkata", "New Delhi", "Chennai"],
-    "c": 2
-  },
-  {
-    "q": "Which major Indian festival is widely known as the 'Festival of Lights'?",
-    "a": ["Holi", "Diwali", "Dussehra", "Onam"],
+    "q": "'Bhakti' movement poetry in early Hindi is strongly associated with which saint-poet?",
+    "a": ["Kalidasa", "Tulsidas", "Bhasa", "Bharavi"],
     "c": 1
   },
   {
-    "q": "Which popular Indian street food features a hollow, crispy puri filled with flavored water and chickpeas?",
-    "a": ["Samosa", "Pani Puri", "Dhokla", "Aloo Tikki"],
-    "c": 1
-  },
-  {
-    "q": "What is the national animal of India?",
-    "a": ["Peacock", "Royal Bengal Tiger", "Asiatic Lion", "Indian Elephant"],
-    "c": 1
-  },
-  {
-    "q": "Which colorful spring festival in India is celebrated by throwing colored powder and water at each other?",
-    "a": ["Holi", "Pongal", "Baisakhi", "Navratri"],
+    "q": "The classical dance form Mohiniyattam originated in:",
+    "a": ["Kerala", "Manipur", "Andhra Pradesh", "Rajasthan"],
     "c": 0
   },
   {
-    "q": "Which Indian city is famously nicknamed the 'Pink City' due to the distinct color of its buildings?",
-    "a": ["Udaipur", "Jodhpur", "Jaipur", "Jaisalmer"],
-    "c": 2
-  },
-  {
-    "q": "What is the national fruit of India, heavily celebrated during the summer season?",
-    "a": ["Apple", "Mango", "Banana", "Guava"],
-    "c": 1
-  },
-  {
-    "q": "Which Indian state is globally famous for its serene backwaters, houseboats, and coconut trees?",
-    "a": ["Punjab", "Rajasthan", "Kerala", "Goa"],
-    "c": 2
-  },
-  {
-    "q": "What traditional Indian garment consists of a long piece of cloth elegantly draped around the body, mostly worn by women?",
-    "a": ["Lehenga", "Saree", "Anarkali", "Salwar Kameez"],
-    "c": 1
-  },
-  {
-    "q": "Which grand monument, facing the Arabian Sea, welcomes visitors arriving by sea to Mumbai?",
-    "a": ["Gateway of India", "India Gate", "Charminar", "Victoria Memorial"],
-    "c": 0
-  },
-  {
-    "q": "What is the capital city of Maharashtra, also known as the financial capital of India?",
-    "a": ["Pune", "Nagpur", "Mumbai", "Nashik"],
-    "c": 2
-  },
-  {
-    "q": "Which Indian state capital is known as the 'City of Nizams' and is famous for its rich Biryani?",
-    "a": ["Bengaluru", "Hyderabad", "Chennai", "Kochi"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital of Karnataka, widely globally recognized as the 'Silicon Valley of India'?",
-    "a": ["Chennai", "Mysuru", "Hyderabad", "Bengaluru"],
+    "q": "The 'Char Dham' pilgrimage (traditional set) includes all EXCEPT:",
+    "a": ["Badrinath", "Dwarka", "Rameswaram", "Vaishno Devi"],
     "c": 3
   },
   {
-    "q": "Which major river is considered the most sacred in Indian tradition and flows through Varanasi?",
-    "a": ["Yamuna", "Ganga", "Narmada", "Godavari"],
+    "q": "The Nataraja iconography (dancing Shiva) is most closely linked to which temple town?",
+    "a": ["Madurai", "Chidambaram", "Thanjavur", "Kanchipuram"],
     "c": 1
   },
   {
-    "q": "Which Indian classical dance form features dancers wearing massive skirt-like costumes and elaborate green face makeup?",
-    "a": ["Kathakali", "Bharatanatyam", "Kathak", "Manipuri"],
+    "q": "The Indian classical music tradition that emphasizes melody frameworks called 'raga' is:",
+    "a": ["Only Carnatic", "Only Hindustani", "Both Hindustani and Carnatic", "Neither; it's folk-only"],
+    "c": 2
+  },
+  {
+    "q": "The instrument Santoor is traditionally associated with music from:",
+    "a": ["Punjab", "Kashmir", "Bengal", "Gujarat"],
+    "c": 1
+  },
+  {
+    "q": "The festival of Hornbill is famously celebrated in:",
+    "a": ["Assam", "Nagaland", "Mizoram", "Tripura"],
+    "c": 1
+  },
+  {
+    "q": "Pattachitra painting is traditionally associated with:",
+    "a": ["Odisha", "Maharashtra", "Haryana", "Himachal Pradesh"],
     "c": 0
   },
   {
-    "q": "What is the capital of the desert state of Rajasthan?",
+    "q": "Which script is primarily used to write Sanskrit in many modern publications across North India?",
+    "a": ["Devanagari", "Gurmukhi", "Kannada", "Persian"],
+    "c": 0
+  },
+  {
+    "q": "The Konark Sun Temple is located in:",
+    "a": ["Gujarat", "Odisha", "Madhya Pradesh", "Tamil Nadu"],
+    "c": 1
+  },
+  {
+    "q": "The traditional textile Pashmina is most associated with:",
+    "a": ["Ladakh & Kashmir region", "Kutch region", "Konkan region", "Malabar region"],
+    "c": 0
+  },
+  {
+    "q": "Bihu (as a festival set) is associated with:",
+    "a": ["Assam", "Sikkim", "Bihar", "Goa"],
+    "c": 0
+  },
+  {
+    "q": "The classical dance form known for gently rounded movements and lasya is:",
+    "a": ["Kathak", "Kuchipudi", "Odissi", "Mohiniyattam"],
+    "c": 3
+  },
+  {
+    "q": "The language traditionally written in Perso-Arabic script in India is:",
+    "a": ["Marathi", "Urdu", "Odia", "Tamil"],
+    "c": 1
+  },
+  {
+    "q": "The epic Silappatikaram is a key work of:",
+    "a": ["Kannada literature", "Tamil literature", "Bengali literature", "Marathi literature"],
+    "c": 1
+  },
+  {
+    "q": "The 'living root bridges' cultural tradition is strongly associated with:",
+    "a": ["Meghalaya", "Uttarakhand", "Rajasthan", "Telangana"],
+    "c": 0
+  },
+  {
+    "q": "Garba and Dandiya Raas are most closely linked with:",
+    "a": ["Punjab", "Gujarat", "Odisha", "West Bengal"],
+    "c": 1
+  },
+  {
+    "q": "Kalaripayattu, often cited among India's oldest martial traditions, originates from:",
+    "a": ["Kerala", "Manipur", "Rajasthan", "Uttar Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "The art of decorating floors with designs using rice flour is widely known as Kolam in:",
+    "a": ["Tamil Nadu", "Punjab", "Bihar", "Himachal Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "Yakshagana is a traditional dance-drama form from:",
+    "a": ["Karnataka", "Bihar", "Jammu & Kashmir", "Chhattisgarh"],
+    "c": 0
+  },
+  {
+    "q": "Which of the following is a Rajasthani folk musical instrument?",
+    "a": ["Ektara", "Sarangi", "Ravanahatta", "Mridangam"],
+    "c": 2
+  },
+  {
+    "q": "The festival Onam is linked to the legend of:",
+    "a": ["Raja Harishchandra", "Mahabali", "Prithviraj Chauhan", "Rana Sanga"],
+    "c": 1
+  },
+  {
+    "q": "Chhau (a classical/folk-leaning dance tradition) is strongly associated with eastern India, especially:",
+    "a": ["Odisha, Jharkhand, West Bengal", "Kerala, Tamil Nadu, Karnataka", "Rajasthan, Gujarat, Maharashtra", "Punjab, Haryana, Himachal"],
+    "c": 0
+  },
+  {
+    "q": "The Ajanta caves are especially famous for:",
+    "a": ["Bronze casting", "Rock-cut paintings and murals", "Stepwell architecture", "Wooden temples"],
+    "c": 1
+  },
+  {
+    "q": "The Brihadeeswara Temple (Thanjavur) is primarily linked to which dynasty?",
+    "a": ["Maurya", "Chola", "Gupta", "Pallava"],
+    "c": 1
+  },
+  {
+    "q": "The Indian festival that prominently features gorgeously crafted clay idols immersed in water is:",
+    "a": ["Lohri", "Ganesh Chaturthi", "Baisakhi", "Pongal"],
+    "c": 1
+  },
+  {
+    "q": "Bhangra has roots in harvest celebrations of:",
+    "a": ["Kerala", "Punjab", "Assam", "Goa"],
+    "c": 1
+  },
+  {
+    "q": "The 'Valmiki Ramayana' is originally composed in:",
+    "a": ["Sanskrit", "Prakrit", "Pali", "Tamil"],
+    "c": 0
+  },
+  {
+    "q": "The weaving tradition Ikat is strongly associated with which Indian state in its globally known 'Patola' form?",
+    "a": ["Gujarat", "Punjab", "Kerala", "Uttarakhand"],
+    "c": 0
+  },
+  {
+    "q": "Bastar Dhokra (metal craft) is famously associated with which state?",
+    "a": ["Chhattisgarh", "Rajasthan", "Sikkim", "Goa"],
+    "c": 0
+  },
+  {
+    "q": "The traditional New Year festival Ugadi is mainly celebrated in:",
+    "a": ["Gujarat and Maharashtra", "Karnataka, Andhra Pradesh, Telangana", "Assam and Meghalaya", "Punjab and Haryana"],
+    "c": 1
+  },
+  {
+    "q": "The Indian literary concept 'Rasa' (aesthetic flavor) is most associated with:",
+    "a": ["Natya Shastra tradition", "Arthashastra tradition", "Charaka Samhita tradition", "Panini's grammar"],
+    "c": 0
+  },
+  {
+    "q": "Which is the correct pair for classical dance -> state association (most widely recognized)?",
+    "a": ["Kathakali -> Gujarat", "Bharatanatyam -> Tamil Nadu", "Manipuri -> Rajasthan", "Odissi -> Punjab"],
+    "c": 1
+  },
+  {
+    "q": "Sattriya (a classical dance form) originates from:",
+    "a": ["Assam", "Bihar", "Madhya Pradesh", "Uttar Pradesh"],
+    "c": 0
+  },
+  {
+    "q": "The Rann of Kutch is culturally associated with which craft-rich region?",
+    "a": ["Malwa", "Kutch", "Bundelkhand", "Doab"],
+    "c": 1
+  },
+  {
+    "q": "The sweet 'Mysore Pak' is traditionally linked to:",
+    "a": ["Karnataka", "West Bengal", "Punjab", "Bihar"],
+    "c": 0
+  },
+  {
+    "q": "Hyderabadi Biryani is most strongly associated with the historical region of:",
+    "a": ["Awadh", "Deccan", "Konkan", "Mithila"],
+    "c": 1
+  },
+  {
+    "q": "Theba (gold on glass) craft is strongly associated with:",
+    "a": ["Rajasthan", "Nagaland", "Kerala", "Odisha"],
+    "c": 0
+  },
+  {
+    "q": "The folk theatre form Nautanki is associated primarily with:",
+    "a": ["Uttar Pradesh (and nearby regions)", "Kerala", "Sikkim", "Manipur"],
+    "c": 0
+  },
+  {
+    "q": "Which language is NOT from the Dravidian language family?",
+    "a": ["Tamil", "Kannada", "Telugu", "Marathi"],
+    "c": 3
+  },
+  {
+    "q": "The Thangka painting tradition in India is strongly associated with:",
+    "a": ["Peddakandla & Sikkim/Himalayan Buddhist regions", "Kutch", "Malabar", "Bundi"],
+    "c": 0
+  },
+  {
+    "q": "The festival of colors, Holi, is strongly linked to the arrival of:",
+    "a": ["Winter", "Spring", "Monsoon", "Autumn"],
+    "c": 1
+  },
+  {
+    "q": "Kumbh Mela is held on the banks of sacred rivers; which of these is a traditional Kumbh location?",
+    "a": ["Ujjain", "Darjeeling", "Shillong", "Coorg"],
+    "c": 0
+  },
+  {
+    "q": "The Indian culinary technique 'tadka' refers to:",
+    "a": ["Fermenting batter", "Tempering spices in hot fat", "Slow-roasting grains", "Smoking food with coal"],
+    "c": 1
+  },
+  {
+    "q": "The traditional Maharashtrian harvest festival Makar Sankranti is especially known for exchanging:",
+    "a": ["Modak", "Tilgul", "Pitha", "Sandesh"],
+    "c": 1
+  },
+  {
+    "q": "Pongal is primarily celebrated in:",
+    "a": ["Tamil Nadu", "Punjab", "Assam", "Odisha"],
+    "c": 0
+  },
+  {
+    "q": "The famous textile Banarasi silk is associated with:",
+    "a": ["Varanasi", "Jaipur", "Kochi", "Bhopal"],
+    "c": 0
+  },
+  {
+    "q": "The cultural region Mithila is especially known for which painting tradition?",
+    "a": ["Warli", "Madhubani", "Kalamkari", "Cheriyal"],
+    "c": 1
+  },
+  {
+    "q": "The term 'Gharana' in Indian classical music refers to:",
+    "a": ["A festival season", "A hereditary school/style lineage", "A percussion cycle", "A temple architecture style"],
+    "c": 1
+  },
+  {
+    "q": "Designed by German architect Otto Königsberger in 1948, which city became India's first planned state capital post-independence?",
+    "a": ["Bhubaneswar", "Gandhinagar", "Dispur", "Ranchi"],
+    "c": 0
+  },
+  {
+    "q": "Before shifting to its current permanent home in Dispur, the capital of Assam was located in which scenic hill town?",
+    "a": ["Kohima", "Shillong", "Imphal", "Gangtok"],
+    "c": 1
+  },
+  {
+    "q": "Which Indian state capital boasts a historic palace called the Ujjayanta Palace, built by Maharaja Radha Kishore Manikya?",
+    "a": ["Agartala", "Aizawl", "Itanagar", "Imphal"],
+    "c": 0
+  },
+  {
+    "q": "Which state capital's name is derived from a local Khasi word meaning 'The Place of the Spirit who roars from the clouds'?",
+    "a": ["Kohima", "Shillong", "Gangtok", "Itanagar"],
+    "c": 1
+  },
+  {
+    "q": "Which of these state capitals holds the distinction of being the highest city by altitude among all Indian state capitals?",
+    "a": ["Shimla", "Srinagar", "Leh", "Gangtok"],
+    "c": 3
+  },
+  {
+    "q": "The city of Panaji, capital of Goa, is situated precisely on the banks of which river?",
+    "a": ["Zuari", "Chapora", "Mandovi", "Sal"],
+    "c": 2
+  },
+  {
+    "q": "Which state capital was built adjacent to a historic medieval city and designed explicitly by Le Corbusier's associate Albert Mayer?",
+    "a": ["Chandigarh", "Dehradun", "Gandhinagar", "Raipur"],
+    "c": 0
+  },
+  {
+    "q": "Itanagar, the capital of Arunachal Pradesh, gets its name from a medieval fort built in the city. What material was predominantly used?",
+    "a": ["Red Sandstone", "Bricks", "Polished Marble", "Bamboo framework"],
+    "c": 1
+  },
+  {
+    "q": "For which state capital was a brand-new, eco-friendly smart city called 'Nava Raipur' constructed to serve as its administrative core?",
+    "a": ["Jharkhand", "Uttarakhand", "Chhattisgarh", "Telangana"],
+    "c": 2
+  },
+  {
+    "q": "Which southern state capital features the 'Vidhāna Soudha', a massive legislative building constructed entirely in the Neo-Dravidian architectural style?",
+    "a": ["Chennai", "Thiruvananthapuram", "Bengaluru", "Hyderabad"],
+    "c": 2
+  },
+  {
+    "q": "The world-famous Indonesian puppet theater tradition that uses leather shadow puppets and is accompanied by a Gamelan orchestra is known as:",
+    "a": ["Wayang Kulit", "Khon", "Kabuki", "Kathakali"],
+    "c": 0
+  },
+  {
+    "q": "In Japan, the intricate, minimalist art of flower arrangement guided by deep spiritual philosophy is called:",
+    "a": ["Bonsai", "Origami", "Ikebana", "Ukiyo-e"],
+    "c": 2
+  },
+  {
+    "q": "The traditional Maori welcoming ceremony in New Zealand involving speeches, singing, and the powerful physical pressing of noses is called a:",
+    "a": ["Haka", "Pōwhiri", "Hāngī", "Iwi"],
+    "c": 1
+  },
+  {
+    "q": "Songkran, the famous water festival celebrating the traditional New Year by washing away bad luck, is most prominently celebrated in which APAC nation?",
+    "a": ["Vietnam", "Thailand", "South Korea", "Malaysia"],
+    "c": 1
+  },
+  {
+    "q": "The spectacular, ancient temple complex of Angkor Wat, featuring stunning reliefs representing Hindu and Buddhist cosmology, is the pride of:",
+    "a": ["Laos", "Cambodia", "Myanmar", "Indonesia"],
+    "c": 1
+  },
+  {
+    "q": "Which East Asian country celebrates the Chuseok festival—a major mid-autumn harvest celebration where families share traditional rice cakes called songpyeon?",
+    "a": ["Japan", "China", "South Korea", "Mongolia"],
+    "c": 2
+  },
+  {
+    "q": "Ao Dai, a striking, elegant tunic worn over long silk trousers, is the recognized national costume of which country?",
+    "a": ["Cambodia", "Vietnam", "Philippines", "Thailand"],
+    "c": 1
+  },
+  {
+    "q": "Australia’s Indigenous culture uses a wind instrument made from hollowed-out eucalyptus wood. It is widely known globally as the:",
+    "a": ["Bullroarer", "Didgeridoo", "Clapping Stick", "Conch shell"],
+    "c": 1
+  },
+  {
+    "q": "The UNESCO-recognized textile art of Batik—using wax-resist dyeing to create incredibly intricate patterns—is deeply rooted in the cultural identity of:",
+    "a": ["Indonesia", "Japan", "Sri Lanka", "Papua New Guinea"],
+    "c": 0
+  },
+  {
+    "q": "In traditional Japanese theater, which dramatic form features all-male actors wearing highly stylized, expressive wooden masks?",
+    "a": ["Kabuki", "Noh", "Bunraku", "Rakugo"],
+    "c": 1
+  },
+  {
+    "q": "The massive Lantern Festival featuring thousands of glowing lanterns released into the night sky to celebrate the end of the Lunar New Year originates from:",
+    "a": ["Taiwan / China", "Philippines", "Cambodia", "Japan"],
+    "c": 0
+  },
+  {
+    "q": "In the Philippines, the vibrant Tinikling folk dance involves dancers skillfully stepping and hopping between rapidly clapping:",
+    "a": ["Bamboo poles", "Wooden blocks", "Coconut shells", "Iron rods"],
+    "c": 0
+  },
+  {
+    "q": "The spectacular Gion Matsuri, a massive month-long festival featuring towering, ornate wooden floats parading through historic streets, takes place in which Japanese city?",
+    "a": ["Tokyo", "Kyoto", "Osaka", "Hiroshima"],
+    "c": 1
+  },
+  {
+    "q": "Which South Asian APAC nation features a unique traditional martial art style known as Angampora, combining combat, self-defense, and meditation?",
+    "a": ["Sri Lanka", "Nepal", "Bangladesh", "Maldives"],
+    "c": 0
+  },
+  {
+    "q": "The traditional architecture of Korea features beautifully curved tiled roofs and a unique subterranean heating system. This classic style of home is known as a:",
+    "a": ["Hanok", "Minka", "Rumah Gadang", "Kampong"],
+    "c": 0
+  },
+  {
+    "q": "The historical Prambanan temple compound, famous for its towering, pointed architecture dedicated to the Trimurti deities, is located in:",
+    "a": ["Thailand", "Malaysia", "Indonesia", "Myanmar"],
+    "c": 2
+  },
+  {
+    "q": "Fiji and several other Pacific Island nations share a deeply significant cultural ritual centered around drinking Kava. What is Kava made from?",
+    "a": ["Fermented coconut water", "Crushed roots of a pepper plant", "Boiled tropical tree bark", "Sun-dried palm leaves"],
+    "c": 1
+  },
+  {
+    "q": "The vibrant Loy Krathong festival involves people releasing beautifully decorated floating baskets onto rivers to pay respect to the water spirits. This takes place in:",
+    "a": ["Laos", "Vietnam", "Thailand", "Philippines"],
+    "c": 2
+  },
+  {
+    "q": "The classical court dance of Cambodia, known for its slow, hypnotic, and highly symbolic hand gestures mimicking growing plants and flowers, is called:",
+    "a": ["Apsara Dance", "Legong", "Khon", "Mani Puri"],
+    "c": 0
+  },
+  {
+    "q": "Which APAC nation’s traditional weaving art is famous for producing T'nalak, a sacred cloth hand-woven by the Tboli people using abaca hemp fibers?",
+    "a": ["Philippines", "Indonesia", "Vietnam", "Malaysia"],
+    "c": 0
+  },
+  {
+    "q": "Which Indian state capital is historically known as the 'City of Nizams' and is home to the iconic 16th-century Charminar?",
+    "a": ["Bengaluru", "Hyderabad", "Bhopal", "Lucknow"],
+    "c": 1
+  },
+  {
+    "q": "Which North-Eastern state capital is built near the site of a historic World War II battle where Commonwealth forces halted the Japanese advance into India in 1944?",
+    "a": ["Imphal", "Kohima", "Agartala", "Aizawl"],
+    "c": 1
+  },
+  {
+    "q": "Ranchi, the capital of Jharkhand, is geographically significant because which major geographical line passes just north of the city?",
+    "a": ["Equator", "Tropic of Capricorn", "Tropic of Cancer", "Prime Meridian"],
+    "c": 2
+  },
+  {
+    "q": "Which state capital's name literally translates to 'The Abode of Clouds' in the local language, matching the name of the state itself?",
+    "a": ["Gangtok", "Itanagar", "Shillong", "None of the above"],
+    "c": 3
+  },
+  {
+    "q": "Thiruvananthapuram, the capital of Kerala, is structurally built across how many coastal hills, historically giving it a distinct undulating landscape?",
+    "a": ["Three Hills", "Five Hills", "Seven Hills", "Nine Hills"],
+    "c": 2
+  },
+  {
+    "q": "Which Indian state capital is famous for its unique 'hanging valley' topography and features the Raj Bhavan situated on an eminence called Sukhasan Hill?",
+    "a": ["Shimla", "Itanagar", "Aizawl", "Dehradun"],
+    "c": 2
+  },
+  {
+    "q": "The planned capital city Gandhinagar is divided into 30 distinct, self-contained sectors. Which prominent global city served as the structural inspiration for its layout?",
+    "a": ["New York City", "Chandigarh", "Paris", "Brasilia"],
+    "c": 1
+  },
+  {
+    "q": "Which state capital houses the Rock Garden, a massive open-air exhibition hall created entirely out of industrial and domestic waste by Nek Chand?",
+    "a": ["Jaipur", "Dehradun", "Chandigarh", "Ranchi"],
+    "c": 2
+  },
+  {
+    "q": "Bhopal, the capital of Madhya Pradesh, is widely recognized as the 'City of Lakes.' Which 11th-century Paramara dynasty king is credited with creating its historic Upper Lake?",
+    "a": ["Raja Bhoj", "Raja Prithvi", "Raja Man Singh", "Raja Vikramaditya"],
+    "c": 0
+  },
+  {
+    "q": "Which state capital features the Hawa Mahal (Palace of Winds), a unique five-story exterior structure resembling the crown of Lord Krishna?",
     "a": ["Jodhpur", "Jaipur", "Udaipur", "Bikaner"],
     "c": 1
   },
   {
-    "q": "Which sweet, yellow, coil-shaped Indian dessert is deep-fried and soaked in sugar syrup?",
-    "a": ["Gulab Jamun", "Jalebi", "Rasgulla", "Laddu"],
+    "q": "Lucknow, the capital of Uttar Pradesh, is globally renowned for its distinct 'Awadhi Culture.' Which historic river flows gracefully through this capital city?",
+    "a": ["Yamuna", "Gomti", "Ghaghra", "Betwa"],
     "c": 1
   },
   {
-    "q": "What popular Indian drink is made by blending yogurt with water, ice, and sugar or salt?",
-    "a": ["Chai", "Lassi", "Nimbu Pani", "Filter Coffee"],
+    "q": "Which eastern state capital was historically known as Patliputra, serving as the imperial seat of the Mauryan and Gupta Empires?",
+    "a": ["Ranchi", "Patna", "Kolkata", "Bhubaneswar"],
     "c": 1
   },
   {
-    "q": "Which famous multi-day festival in Maharashtra is celebrated with grand public processions of Lord Ganesha idols?",
-    "a": ["Ganesh Chaturthi", "Janmashtami", "Gudi Padwa", "Makar Sankranti"],
+    "q": "The capital of Uttarakhand, Dehradun, lies nestled within which unique geographic valley formation located between the Himalayas and the Shivalik Hills?",
+    "a": ["Kangra Valley", "Doon Valley", "Spiti Valley", "Silent Valley"],
+    "c": 1
+  },
+  {
+    "q": "Which Indian state capital serves as the primary gateway to the pristine Tawang Monastery, located further up in its high-altitude northern districts?",
+    "a": ["Kohima", "Itanagar", "Gangtok", "Imphal"],
+    "c": 1
+  },
+  {
+    "q": "Shimla, the summer capital of British India and current capital of Himachal Pradesh, features a historic pedestrian avenue at its center known simply as:",
+    "a": ["The Ridge / Mall Road", "Connaught Place", "Marine Drive", "Brigade Road"],
     "c": 0
   },
   {
-    "q": "What is the national bird of India, famous for its magnificent blue and green feathers?",
-    "a": ["Pigeon", "Eagle", "Peacock", "Parrot"],
+    "q": "The spectacular Sun Temple at Modhera, renowned for its magnificent inverted-pyramid stepwell (Suraj Kund), is located in which state?",
+    "a": ["Rajasthan", "Odisha", "Gujarat", "Madhya Pradesh"],
     "c": 2
   },
   {
-    "q": "Which historic four-minaret monument stands right in the heart of Hyderabad?",
-    "a": ["Golconda Fort", "Charminar", "Qutub Minar", "Bara Imambara"],
+    "q": "Phulkari, an embroidery craft featuring dense geometric patterns made with bright silk threads on coarse cotton cloth, is native to:",
+    "a": ["Gujarat", "Punjab", "West Bengal", "Karnataka"],
     "c": 1
   },
   {
-    "q": "Which coastal Indian state is highly popular among tourists for its beautiful sandy beaches and Portuguese heritage?",
-    "a": ["Kerala", "Goa", "Gujarat", "Odisha"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of West Bengal, historically known as the 'City of Joy'?",
-    "a": ["Patna", "Ranchi", "Kolkata", "Guwahati"],
-    "c": 2
-  },
-  {
-    "q": "Which popular Indian flatbread is traditionally baked inside a clay oven called a tandoor?",
-    "a": ["Roti", "Naan", "Paratha", "Puri"],
-    "c": 1
-  },
-  {
-    "q": "Which major festival in Gujarat features nine nights of energetic dancing using wooden sticks called Dandiya?",
-    "a": ["Navratri", "Uttarayan", "Diwali", "Holi"],
+    "q": "The ancient, rock-cut Kailash Temple at Ellora, carved out of a single monolithic rock from the top down, was commissioned by which dynasty?",
+    "a": ["Rashtrakuta", "Pallava", "Chalukya", "Chola"],
     "c": 0
   },
   {
-    "q": "What is the capital of Tamil Nadu, formerly known as Madras?",
-    "a": ["Madurai", "Coimbatore", "Chennai", "Kochi"],
+    "q": "Which Indian classical vocal style is considered the oldest surviving form, characterized by its austere, spiritual rendering and deep focus on the alaap?",
+    "a": ["Khayal", "Thumri", "Dhrupad", "Ghazal"],
     "c": 2
   },
   {
-    "q": "Which iconic Indian street snack consists of a spiced potato patty fried inside a flour casing, shaped like a triangle?",
-    "a": ["Kachori", "Samosa", "Pakoda", "Spring Roll"],
+    "q": "The famous Warli painting tradition, which uses basic geometric shapes made of white rice paste to show daily village life, belongs to:",
+    "a": ["Madhya Pradesh", "Maharashtra", "Bihar", "Rajasthan"],
     "c": 1
   },
   {
-    "q": "Which language is prominently spoken in the state of Maharashtra?",
-    "a": ["Hindi", "Gujarati", "Marathi", "Bengali"],
-    "c": 2
-  },
-  {
-    "q": "Which unique 5-story palace in Jaipur features hundreds of small windows designed for cool breeze?",
-    "a": ["Umaid Bhawan", "Hawa Mahal", "City Palace", "Lake Palace"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Gujarat, named after the Father of the Nation?",
-    "a": ["Ahmedabad", "Surat", "Gandhinagar", "Vadodara"],
-    "c": 2
-  },
-  {
-    "q": "Which staple South Indian breakfast combo features fluffy steamed rice cakes served with a lentil stew?",
-    "a": ["Idli and Sambar", "Poha and Jalebi", "Chole Bhature", "Vada Pav"],
+    "q": "Which historic treaty signed in 1816 established the modern international boundary between India and Nepal?",
+    "a": ["Treaty of Sugauli", "Treaty of Sinchula", "Treaty of Punakha", "Treaty of Tahlia"],
     "c": 0
   },
   {
-    "q": "What is the capital of Punjab and Haryana, famously designed by the architect Le Corbusier?",
-    "a": ["Amritsar", "Ludhiana", "Gurugram", "Chandigarh"],
-    "c": 3
-  },
-  {
-    "q": "Which spongy white dessert made from cottage cheese balls soaked in clear sugar syrup is a pride of West Bengal?",
-    "a": ["Rasgulla", "Kaju Katli", "Mysore Pak", "Barfi"],
+    "q": "The famous double-decked root bridges found in Cherrapunji are engineered using the roots of which specific tree species?",
+    "a": ["Ficus elastica", "Banyan indica", "Ficus religiosa", "Artocarpus heterophyllus"],
     "c": 0
   },
   {
-    "q": "Which traditional Indian practice combining physical postures, breathing exercises, and meditation is celebrated globally on June 21?",
-    "a": ["Ayurveda", "Yoga", "Kathak", "Kalaripayattu"],
+    "q": "Which ancient university in ancient India had a library named 'Dharmaganja' which comprised three grand buildings called Ratnasagara, Ratnodadhi, and Ratnayanjaka?",
+    "a": ["Takshashila", "Nalanda", "Vikramashila", "Valabhi"],
     "c": 1
   },
   {
-    "q": "What is the capital of the state of Goa?",
-    "a": ["Margao", "Vasco da Gama", "Panaji", "Mapusa"],
-    "c": 2
-  },
-  {
-    "q": "Which Indian festival celebrates the deep bond of love and protection between brothers and sisters by tying a sacred thread?",
-    "a": ["Bhai Dooj", "Raksha Bandhan", "Karwa Chauth", "Maha Shivratri"],
-    "c": 1
-  },
-  {
-    "q": "What popular Mumbai street food is affectionately dubbed the 'Indian Veg Burger'?",
-    "a": ["Misal Pav", "Vada Pav", "Pav Bhaji", "Bhel Puri"],
-    "c": 1
-  },
-  {
-    "q": "Which Indian state capital is nicknamed the 'City of Lakes' and located in Madhya Pradesh?",
-    "a": ["Indore", "Bhopal", "Gwalior", "Jabalpur"],
-    "c": 1
-  },
-  {
-    "q": "Which stringed instrument, heavily popularized by Pandit Ravi Shankar, is an icon of traditional Indian music?",
-    "a": ["Guitar", "Sitar", "Violin", "Flute"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Uttar Pradesh, widely known as the 'City of Nawabs'?",
-    "a": ["Varanasi", "Agra", "Lucknow", "Kanpur"],
-    "c": 2
-  },
-  {
-    "q": "Which harvest festival is enthusiastically celebrated in Kerala with grand boat races and colorful floral carpets?",
-    "a": ["Pongal", "Onam", "Bihu", "Lohri"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital of Bihar, a city situated beautifully on the southern bank of the river Ganga?",
-    "a": ["Gaya", "Patna", "Muzaffarpur", "Bhagalpur"],
-    "c": 1
-  },
-  {
-    "q": "Which Indian state is famously called the 'Land of Five Rivers' and is known for its energetic Bhangra dance?",
-    "a": ["Haryana", "Rajasthan", "Punjab", "Gujarat"],
-    "c": 2
-  },
-  {
-    "q": "What is the capital of Jammu and Kashmir during the breezy summer season?",
-    "a": ["Jammu", "Srinagar", "Leh", "Gulmarg"],
-    "c": 1
-  },
-  {
-    "q": "Which ancient Indian art style utilizes organic colors to create geometric village scenes, originating in Maharashtra?",
-    "a": ["Madhubani", "Warli", "Kalamkari", "Pattachitra"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Kerala, located near the southern tip of mainland India?",
-    "a": ["Kochi", "Kozhikode", "Thiruvananthapuram", "Thrissur"],
-    "c": 2
-  },
-  {
-    "q": "Which traditional North Indian meal features heavily spiced chickpeas served alongside large, fluffy deep-fried bread?",
-    "a": ["Chole Bhature", "Dal Makhani", "Alu Paratha", "Kadhi Chawal"],
+    "q": "The traditional multi-course meal of Kashmiri cuisine, consisting of nearly 36 dishes primarily based on meat, is known as:",
+    "a": ["Wazwan", "Sadhya", "Daawat", "Thali"],
     "c": 0
   },
   {
-    "q": "What is the capital city of Odisha, famously known as the 'Temple City of India'?",
-    "a": ["Cuttack", "Puri", "Bhubaneswar", "Rourkela"],
-    "c": 2
-  },
-  {
-    "q": "Which classical dance form from Tamil Nadu is known for its fixated geometric poses and fast, rhythmic footwork?",
-    "a": ["Kathak", "Bharatanatyam", "Kuchipudi", "Odissi"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital of Assam, the state heavily renowned for its premium quality tea gardens?",
-    "a": ["Guwahati", "Dispur", "Silchar", "Dibrugarh"],
-    "c": 1
-  },
-  {
-    "q": "Which famous traditional garment for men features a long knee-length tunic shirt, typically paired with a pajama or churidar?",
-    "a": ["Sherwani", "Kurta", "Dhoti", "Lungi"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Telangana, a major global hub for technology and pharmaceuticals?",
-    "a": ["Warangal", "Nizamabad", "Hyderabad", "Khammam"],
-    "c": 2
-  },
-  {
-    "q": "Which major autumn festival celebrates the victory of Lord Rama over Ravana, culminating in burning giant effigies?",
-    "a": ["Dussehra", "Holi", "Rakhi", "Janmashtami"],
+    "q": "Which unique, highly localized salt-harvesting community operates in the harsh flats of the Little Rann of Kutch every winter?",
+    "a": ["Agariyas", "Rabaris", "Maldharis", "Jats"],
     "c": 0
   },
   {
-    "q": "What is the capital of Himachal Pradesh, which served as the official summer capital of British India?",
-    "a": ["Manali", "Dharamshala", "Shimla", "Kullu"],
-    "c": 2
-  },
-  {
-    "q": "Which popular Indian spice, giving curries their distinct yellow color, is globally revered for its medicinal properties?",
-    "a": ["Cumin", "Turmeric", "Cardamom", "Cinnamon"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital of Uttarakhand, located peacefully in the scenic Doon Valley?",
-    "a": ["Nainital", "Mussoorie", "Dehradun", "Rishikesh"],
-    "c": 2
-  },
-  {
-    "q": "Which massive open-air laundry in Mumbai is globally famous for its rows of concrete wash pens and manual washers?",
-    "a": ["Chor Bazaar", "Dhobi Ghat", "Crawford Market", "Colaba Causeway"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Andhra Pradesh?",
-    "a": ["Vijayawada", "Visakhapatnam", "Amaravati", "Tirupati"],
-    "c": 2
-  },
-  {
-    "q": "Which sweet dairy dish made of thick, strained yogurt flavored with saffron and cardamom is a popular dessert in Maharashtra and Gujarat?",
-    "a": ["Rabdi", "Shrikhand", "Kheer", "Rasmalai"],
-    "c": 1
-  },
-  {
-    "q": "Which global culinary favorite, featuring raw fish placed over seasoned vinegared rice, originates from Japan?",
-    "a": ["Kimchi", "Sushi", "Dim Sum", "Pad Thai"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Japan, known for its mix of ultra-modern skyscrapers and historic shrines?",
-    "a": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
-    "c": 2
-  },
-  {
-    "q": "Which popular garment, consisting of a single piece of cloth wrapped securely around the waist like a skirt, is worn across many Pacific Islands?",
-    "a": ["Saree", "Sarong / Lava-lava", "Kimono", "Hanbok"],
-    "c": 1
-  },
-  {
-    "q": "What spicy, fermented cabbage and vegetable dish is served with almost every traditional meal in South Korea?",
-    "a": ["Sushi", "Kimchi", "Ramen", "Dumplings"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of South Korea, a booming global hub for tech and K-pop culture?",
-    "a": ["Busan", "Incheon", "Seoul", "Daegu"],
-    "c": 2
-  },
-  {
-    "q": "Which traditional Japanese loose-fitting robe with wide sleeves is worn during special festivals and tea ceremonies?",
-    "a": ["Hanbok", "Kimono", "Ao Dai", "Cheongsam"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Australia, purpose-built to serve as the nation's political center?",
-    "a": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
-    "c": 2
-  },
-  {
-    "q": "Which iconic, energetic pre-match dance is performed by New Zealand's rugby teams to honor Maori cultural heritage?",
-    "a": ["Hula", "Haka", "Siva Tau", "Saman"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of New Zealand?",
-    "a": ["Auckland", "Christchurch", "Wellington", "Queenstown"],
-    "c": 2
-  },
-  {
-    "q": "Which world-famous ancient Buddhist temple complex features hundreds of bell-shaped stupas on the island of Java in Indonesia?",
-    "a": ["Angkor Wat", "Borobudur", "Bagan", "Wat Arun"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Indonesia?",
-    "a": ["Jakarta", "Bali", "Surabaya", "Bandung"],
+    "q": "The iconic iron pillar located in the Qutb Minar complex in Delhi was erected during the reign of which prominent ruler?",
+    "a": ["Chandragupta II", "Ashoka the Great", "Samudragupta", "Harsha Vardhana"],
     "c": 0
   },
   {
-    "q": "Which world-famous massive temple complex in Cambodia stands out as the largest religious monument on Earth?",
-    "a": ["Borobudur", "Angkor Wat", "Wat Phra Kaew", "Sanchi Stupa"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Thailand, famously known for its vibrant street life and ornate shrines?",
-    "a": ["Phuket", "Bangkok", "Chiang Mai", "Pattaya"],
-    "c": 1
-  },
-  {
-    "q": "Which unique paper-folding art form, creating animals and shapes without cutting, originates from Japan?",
-    "a": ["Ikebana", "Origami", "Bonsai", "Calligraphy"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of the Philippines?",
-    "a": ["Cebu", "Manila", "Davao", "Quezon City"],
-    "c": 1
-  },
-  {
-    "q": "Which elegant, high-necked silk dress featuring a distinct side slit is a well-known traditional garment in China?",
-    "a": ["Kimono", "Cheongsam / Qipao", "Hanbok", "Saree"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of China?",
-    "a": ["Shanghai", "Hong Kong", "Beijing", "Guangzhou"],
-    "c": 2
-  },
-  {
-    "q": "Which global favorite Thai noodle dish is stir-fried with tofu, bean sprouts, peanuts, and egg?",
-    "a": ["Ramen", "Pad Thai", "Pho", "Laksa"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Malaysia, home to the iconic Petronas Twin Towers?",
-    "a": ["Penang", "Kuala Lumpur", "Malacca", "Johor Bahru"],
-    "c": 1
-  },
-  {
-    "q": "Which country is internationally famous for its 'Tea Ceremony', a deeply meditative cultural ritual of preparing green tea?",
-    "a": ["Japan", "India", "Australia", "Philippines"],
+    "q": "The unique, highly specialized puppet art form of Odisha which utilizes shadow puppetry techniques is called:",
+    "a": ["Ravana Chhaya", "Tholu Bommalata", "Togalu Gombeyaatta", "Kathputli"],
     "c": 0
   },
   {
-    "q": "What is the capital city of Vietnam?",
-    "a": ["Ho Chi Minh City", "Hanoi", "Da Nang", "Hue"],
-    "c": 1
-  },
-  {
-    "q": "Which popular Southeast Asian fruit is famous for its large size, thorny outer shell, and very strong smell?",
-    "a": ["Mango", "Durian", "Dragon Fruit", "Papaya"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Singapore?",
-    "a": ["Singapore", "Kuala Lumpur", "Manila", "Jakarta"],
+    "q": "The monumental 'Gol Gumbaz' in Vijayapura, featuring one of the largest masonry domes in the world, is the mausoleum of:",
+    "a": ["Mohammed Adil Shah", "Ibrahim Adil Shah II", "Yusuf Adil Shah", "Malik Ambar"],
     "c": 0
   },
   {
-    "q": "Which beloved Vietnamese noodle soup features a rich clear broth, rice noodles, herbs, and thinly sliced meat?",
-    "a": ["Ramen", "Pho", "Pad Thai", "Laksa"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Sri Lanka, serving as its primary executive and judicial center?",
-    "a": ["Kandy", "Colombo", "Galle", "Jaffna"],
-    "c": 1
-  },
-  {
-    "q": "Which popular Australian snack spreads a savory, dark brown yeast extract paste thinly over buttered toast?",
-    "a": ["Nutella", "Vegemite", "Peanut Butter", "Hummus"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Bangladesh?",
-    "a": ["Chattogram", "Dhaka", "Sylhet", "Khulna"],
-    "c": 1
-  },
-  {
-    "q": "Which traditional art form from Japan involves cultivating miniature trees in small containers to mimic full-sized trees?",
-    "a": ["Origami", "Bonsai", "Ikebana", "Anime"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Nepal, situated high up in a valley near the majestic Himalayas?",
-    "a": ["Pokhara", "Kathmandu", "Lalitpur", "Thimphu"],
-    "c": 1
-  },
-  {
-    "q": "Which major multi-day island festival features Thai locals splashing water on each other to celebrate the traditional New Year?",
-    "a": ["Songkran", "Lantern Festival", "Moon Festival", "Chuseok"],
+    "q": "Which script, used primarily for commercial transactions in historic northern India, developed directly out of the Sharada script lineage?",
+    "a": ["Landa", "Modi", "Kaithi", "Takri"],
     "c": 0
   },
   {
-    "q": "What is the capital city of the scenic island nation of Fiji?",
-    "a": ["Nadi", "Suva", "Lautoka", "Labasa"],
-    "c": 1
-  },
-  {
-    "q": "Which famous multi-day autumn harvest festival in South Korea sees families gather to make half-moon shaped rice cakes?",
-    "a": ["Songkran", "Chuseok", "Holi", "Golden Week"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Pakistan?",
-    "a": ["Karachi", "Lahore", "Islamabad", "Rawalpindi"],
-    "c": 2
-  },
-  {
-    "q": "Which iconic native animal from Australia carries its young inside a pocket-like abdominal pouch?",
-    "a": ["Koala", "Kangaroo", "Platypus", "Wombat"],
-    "c": 1
-  },
-  {
-    "q": "What is the capital city of Taiwan?",
-    "a": ["Kaohsiung", "Taipei", "Taichung", "Tainan"],
-    "c": 1
-  },
-  {
-    "q": "Which traditional garment featuring a long split tunic over flowing silk trousers serves as the national costume of Vietnam?",
-    "a": ["Ao Dai", "Hanbok", "Kimono", "Saree"],
+    "q": "The intricate, complex vocal style of Carnatic music that involves fast-paced, multi-octave syllable combinations is called:",
+    "a": ["Tanam", "Kriti", "Tillana", "Alapana"],
     "c": 0
   },
   {
-    "q": "What is the capital city of Mongolia?",
-    "a": ["Ulaanbaatar", "Astana", "Tashkent", "Baku"],
+    "q": "Which ancient school of Indian philosophy, founded by Sage Kanada, is famous for introducing early atomic theories?",
+    "a": ["Vaisheshika", "Nyaya", "Samkhya", "Mimamsa"],
     "c": 0
   },
   {
-    "q": "Which ancient, highly stylized art form of Japanese floral design translates to 'arranging flowers' or 'making flowers alive'?",
-    "a": ["Origami", "Ikebana", "Bonsai", "Kabuki"],
-    "c": 1
+    "q": "The globally renowned, heavily structured hand-loom textile pattern from Odisha featuring abstract wavy borders is known as:",
+    "a": ["Sambalpuri Ikat", "Pochampally", "Bomkai", "Khandua"],
+    "c": 0
   },
   {
-    "q": "What is the capital city of the Himalayan kingdom of Bhutan?",
-    "a": ["Kathmandu", "Thimphu", "Paro", "Punakha"],
-    "c": 1
+    "q": "Which historical monument in Delhi was the structural and architectural inspiration behind the grand design of the Taj Mahal?",
+    "a": ["Humayun's Tomb", "Safdarjung Tomb", "Lodhi Tombs", "Purana Qila"],
+    "c": 0
   },
   {
-    "q": "Which massive Lunar New Year ritual across multiple East Asian countries involves performing athletic dances inside oversized, colorful puppet costumes?",
-    "a": ["Haka Dance", "Lion and Dragon Dances", "Flamenco Dance", "Kathakali"],
-    "c": 1
-  }
-]
+    "q": "The unique, heavy metal mirror-making craft utilizing secret copper-tin alloy ratios in Kerala is centered in which town?",
+    "a": ["Aranmula", "Mannar", "Payyanur", "Palakkad"],
+    "c": 0
+  },
+  {
+    "q": "Which traditional New Year festival in Mizoram is celebrated with rhythmic bamboo dancing following the clearing of forests?",
+    "a": ["Chapchar Kut", "Mim Kut", "Pawl Kut", "Anthurium Festival"],
+    "c": 0
+  },
+  {
+    "q": "The monumental, rock-cut monolithic structure known as the 'Descent of the Ganges' or 'Arjuna's Penance' is located at:",
+    "a": ["Mamallapuram", "Aihole", "Pattadakal", "Badami"],
+    "c": 0
+  },
+  {
+    "q": "Which iconic musical form in Hindustani classical music features non-lexical syllables like 'Ta', 'Na', and 'Der' performed at an ultra-fast tempo?",
+    "a": ["Tarana", "Thumri", "Dadra", "Tappa"],
+    "c": 0
+  },
+  {
+    "q": "The classic, monumental group of monuments at Pattadakal in Karnataka was built under the patronage of which dynasty?",
+    "a": ["Chalukyas of Badami", "Rashtrakutas", "Western Gangas", "Hoysalas"],
+    "c": 0
+  },
+  {
+    "q": "Which historic, highly refined hand-painted textile tradition from Andhra Pradesh utilizes natural vegetable dyes and bamboo pens?",
+    "a": ["Srikalahasti Kalamkari", "Machilipatnam Kalamkari", "Chanderi", "Maheshwari"],
+    "c": 0
+  },
+  {
+    "q": "The monumental stepwell 'Rani ki Vav' at Patan, Gujarat, was constructed in memory of King Bhimdev I by which Queen?",
+    "a": ["Udayamati", "Naiki Devi", "Minaladevi", "Rudramadevi"],
+    "c": 0
+  },
+  {
+    "q": "The world-famous 'Blue and White' pottery tradition of Jaipur was heavily influenced and revived by which master artist?",
+    "a": ["Kripal Singh Shekhawat", "Nek Chand", "B.C. Sanyal", "K.G. Subramanyan"],
+    "c": 0
+  },
+  {
+    "q": "Which architectural element, featuring an overhanging eaves supported by large decorative brackets, is iconic to Mughal and Rajput structures?",
+    "a": ["Chhajja", "Jharokha", "Chatri", "Jaali"],
+    "c": 0
+  },
+  {
+    "q": "The historic, highly stylized scroll-painting narrative tradition from Telangana used by storytelling communities is called:",
+    "a": ["Cheriyal Scrolls", "Phad Paintings", "Kavad Art", "Kalighat Art"],
+    "c": 0
+  },
+  {
+    "q": "Which complex, rhythmic percussion accompaniment system in Carnatic music utilizes an earthen clay pot?",
+    "a": ["Ghatam", "Kanjira", "Mridangam", "Morsing"],
+    "c": 0
+  },
+  {
+    "q": "The historic, monumental Sun Temple at Konark features a giant stone chariot structure with how many wheels?",
+    "a": ["24 wheels", "12 wheels", "16 wheels", "32 wheels"],
+    "c": 0
+  },
+  {
+    "q": "Which major, highly ancient literary text serves as the core source describing the foundational rules of Indian classical dramaturgy?",
+    "a": ["Natya Shastra", "Abhinavabharati", "Dasharupaka", "Kavyamimamsa"],
+    "c": 0
+  },
+  {
+    "q": "The legendary, ultra-fine white cotton textile weave from historical Bengal that could pass through a wedding ring was known as:",
+    "a": ["Dhaka Muslin", "Jamdani", "Chanderi", "Mulmul"],
+    "c": 0
+  },
+  {
+    "q": "Which distinctive form of traditional wall art, using cow dung, mud, and mirrors, is crafted by the women of Kutch?",
+    "a": ["Lippan Kaam", "Mandana Art", "Chittara Paint", "Pithora Paint"],
+    "c": 0
+  },
+  {
+    "q": "The complex, highly ornamentative embroidery style utilizing white cotton threads on fine muslin fabric from Lucknow is called:",
+    "a": ["Chikankari", "Zardozi", "Kantha", "Kasuti"],
+    "c": 0
+  },
+  {
+    "q": "Which regional language family does Malto, spoken by hill tribes in Jharkhand and Bihar, belong to?",
+    "a": ["Dravidian", "Indo-Aryan", "Austroasiatic", "Tibeto-Burman"],
+    "c": 0
+  },
+  {
+    "q": "The historic, heavily stylized martial art dance featuring extensive shield and sword footwork from Manipur is called:",
+    "a": ["Thang-Ta", "Kalaripayattu", "Gatka", "Silambam"],
+    "c": 0
+  },
+  {
+    "q": "Which massive, complex 8th-century rock-cut monolithic temple at Ellora was excavated entirely from the top to the base?",
+    "a": ["Kailashnath Temple", "Dashavatara Cave", "Rameshwar Cave", "Dhumar Lena"],
+    "c": 0
+  },
+  {
+    "q": "The complex, geometric tile-like layout design rule used in ancient Indian temple architectural manuals is known as:",
+    "a": ["Vastu Purusha Mandala", "Shilpa Shastra", "Agama Vidhi", "Prasada Mandana"],
+    "c": 0
+  },
+  {
+    "q": "Which regional dynamic stringed instrument is highly integral to the Baul musical tradition of West Bengal?",
+    "a": ["Ektara", "Dotara", "Esraj", "Sarangi"],
+    "c": 0
+  },
+  {
+    "q": "The iconic, historic stepwell Chand Baori, featuring thousands of perfectly symmetric narrow steps, is located in which town?",
+    "a": ["Abhaneri", "Bundi", "Patan", "Adalaj"],
+    "c": 0
+  },
+  {
+    "q": "Which intricate style of traditional embroidery from Karnataka involves pulling threads to create ultra-fine geometric designs?",
+    "a": ["Kasuti", "Phulkari", "Toda", "Sujini"],
+    "c": 0
+  },
+  {
+    "q": "The classical, highly ornamentative musical compositions of Tyagaraja, Muthuswami Dikshitar, and Syama Sastri are known collectively as the:",
+    "a": ["Trinity of Carnatic Music", "Hindustani Masters", "Ashtachap Poets", "Sangeet Natak Foundation"],
+    "c": 0
+  },
+  {
+    "q": "Which legendary, historic Persian court musician is widely credited with inventing the Sitar and the

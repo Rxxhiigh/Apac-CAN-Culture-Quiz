@@ -15,9 +15,11 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
         .card { background: white; width: 100%; max-width: 500px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: var(--primary); font-size: 24px; margin-bottom: 8px; }
-        h2 { font-size: 14px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
-        .btn { background: var(--accent); color: white; border: none; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s; }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 { font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
+        .input-field { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; font-size: 16px; text-align: center; outline: none; }
+        .input-field:focus { border-color: var(--accent); }
+        .btn { background: var(--accent); color: white; border: none; padding: 16px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s; }
         .btn:hover { background: #1d4ed8; }
         .timer-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 24px; overflow: hidden; display: none; }
         .timer-fill { height: 100%; width: 100%; background: #ef4444; transition: width 1s linear; }
@@ -26,9 +28,14 @@
         .options-grid { display: grid; gap: 12px; margin-bottom: 20px; }
         .option-btn { background: #f1f5f9; border: 2px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: left; font-size: 15px; cursor: pointer; transition: all 0.15s; font-weight: 500; color: var(--text); }
         .option-btn:hover { background: #e2e8f0; border-color: #cbd5e1; }
-        .badge { display: inline-block; padding: 12px 24px; border-radius: 50px; font-weight: 700; margin-top: 15px; font-size: 18px; }
-        .badge.win { background: #dcfce7; color: #15803d; border: 2px dashed #22c55e; }
-        .badge.lost { background: #fef3c7; color: #b45309; }
+        .badge { display: inline-block; padding: 16px 32px; border-radius: 50px; font-weight: 700; margin-top: 20px; font-size: 20px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .badge.win { background: #dcfce7; color: #15803d; border: 2px dashed #22c55e; animation: pulse 1.5s infinite; }
+        .badge.lost { background: #f1f5f9; color: #475569; border: 2px solid #cbd5e1; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
@@ -37,7 +44,8 @@
     <div id="start-screen">
         <h1>APAC-CAN</h1>
         <h2>Cultural Awareness Network Quiz</h2>
-        <p style="margin-bottom: 24px; color: #475569; line-height: 1.6;">Test your knowledge on Indian culture, tricky state capitals, and APAC traditions! You have <b>1 minute</b> to tackle <b>15 random questions</b>. Score 10 or more to win a prize!</p>
+        <p style="margin-bottom: 20px; color: #475569; line-height: 1.6; font-size: 14px;">Test your knowledge on regional heritage, tricky capitals, and deep APAC folklore! You have <b>60 seconds</b> to tackle <b>15 random questions</b>.</p>
+        <input type="text" id="player-name" class="input-field" placeholder="Enter Your Name..." maxlength="25">
         <button class="btn" onclick="startQuiz()">Start Challenge</button>
     </div>
 
@@ -52,136 +60,48 @@
     </div>
 
     <div id="result-screen" style="display: none;">
-        <h1>Challenge Finished!</h1>
-        <p style="font-size: 16px; margin: 16px 0 8px 0; color: #475569;">Your Final Score</p>
-        <div style="font-size: 48px; font-weight: 800; color: var(--primary);" id="final-score">0/15</div>
+        <h1 id="result-title">Challenge Finished!</h1>
+        <p style="font-size: 15px; margin: 16px 0 4px 0; color: #475569;" id="result-player">Player</p>
+        <div style="font-size: 54px; font-weight: 800; color: var(--primary);" id="final-score">0/15</div>
         <div id="prize-badge"></div>
         <button class="btn" style="margin-top: 30px; background: #64748b;" onclick="location.reload()">Next Player</button>
     </div>
 </div>
 
 <script>
-    // Embedded Easier Questions Bank
-    const allQuestions = [
-      { "q": "Which iconic monument in Agra was built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal?", "a": ["Qutub Minar", "Taj Mahal", "Red Fort", "Hawa Mahal"], "c": 1 },
-      { "q": "What is the capital city of India?", "a": ["Mumbai", "Kolkata", "New Delhi", "Chennai"], "c": 2 },
-      { "q": "Which major Indian festival is widely known as the 'Festival of Lights'?", "a": ["Holi", "Diwali", "Dussehra", "Onam"], "c": 1 },
-      { "q": "Which popular Indian street food features a hollow, crispy puri filled with flavored water and chickpeas?", "a": ["Samosa", "Pani Puri", "Dhokla", "Aloo Tikki"], "c": 1 },
-      { "q": "What is the national animal of India?", "a": ["Peacock", "Royal Bengal Tiger", "Asiatic Lion", "Indian Elephant"], "c": 1 },
-      { "q": "Which colorful spring festival in India is celebrated by throwing colored powder and water at each other?", "a": ["Holi", "Pongal", "Baisakhi", "Navratri"], "c": 0 },
-      { "q": "Which Indian city is famously nicknamed the 'Pink City' due to the distinct color of its buildings?", "a": ["Udaipur", "Jodhpur", "Jaipur", "Jaisalmer"], "c": 2 },
-      { "q": "What is the national fruit of India, heavily celebrated during the summer season?", "a": ["Apple", "Mango", "Banana", "Guava"], "c": 1 },
-      { "q": "Which Indian state is globally famous for its serene backwaters, houseboats, and coconut trees?", "a": ["Punjab", "Rajasthan", "Kerala", "Goa"], "c": 2 },
-      { "q": "What traditional Indian garment consists of a long piece of cloth elegantly draped around the body, mostly worn by women?", "a": ["Lehenga", "Saree", "Anarkali", "Salwar Kameez"], "c": 1 },
-      { "q": "Which grand monument, facing the Arabian Sea, welcomes visitors arriving by sea to Mumbai?", "a": ["Gateway of India", "India Gate", "Charminar", "Victoria Memorial"], "c": 0 },
-      { "q": "What is the capital city of Maharashtra, also known as the financial capital of India?", "a": ["Pune", "Nagpur", "Mumbai", "Nashik"], "c": 2 },
-      { "q": "Which Indian state capital is known as the 'City of Nizams' and is famous for its rich Biryani?", "a": ["Bengaluru", "Hyderabad", "Chennai", "Kochi"], "c": 1 },
-      { "q": "What is the capital of Karnataka, widely globally recognized as the 'Silicon Valley of India'?", "a": ["Chennai", "Mysuru", "Hyderabad", "Bengaluru"], "c": 3 },
-      { "q": "Which major river is considered the most sacred in Indian tradition and flows through Varanasi?", "a": ["Yamuna", "Ganga", "Narmada", "Godavari"], "c": 1 },
-      { "q": "Which Indian classical dance form features dancers wearing massive skirt-like costumes and elaborate green face makeup?", "a": ["Kathakali", "Bharatanatyam", "Kathak", "Manipuri"], "c": 0 },
-      { "q": "What is the capital of the desert state of Rajasthan?", "a": ["Jodhpur", "Jaipur", "Udaipur", "Bikaner"], "c": 1 },
-      { "q": "Which sweet, yellow, coil-shaped Indian dessert is deep-fried and soaked in sugar syrup?", "a": ["Gulab Jamun", "Jalebi", "Rasgulla", "Laddu"], "c": 1 },
-      { "q": "What popular Indian drink is made by blending yogurt with water, ice, and sugar or salt?", "a": ["Chai", "Lassi", "Nimbu Pani", "Filter Coffee"], "c": 1 },
-      { "q": "Which famous multi-day festival in Maharashtra is celebrated with grand public processions of Lord Ganesha idols?", "a": ["Ganesh Chaturthi", "Janmashtami", "Gudi Padwa", "Makar Sankranti"], "c": 0 },
-      { "q": "What is the national bird of India, famous for its magnificent blue and green feathers?", "a": ["Pigeon", "Eagle", "Peacock", "Parrot"], "c": 2 },
-      { "q": "Which historic four-minaret monument stands right in the heart of Hyderabad?", "a": ["Golconda Fort", "Charminar", "Qutub Minar", "Bara Imambara"], "c": 1 },
-      { "q": "Which coastal Indian state is highly popular among tourists for its beautiful sandy beaches and Portuguese heritage?", "a": ["Kerala", "Goa", "Gujarat", "Odisha"], "c": 1 },
-      { "q": "What is the capital city of West Bengal, historically known as the 'City of Joy'?", "a": ["Patna", "Ranchi", "Kolkata", "Guwahati"], "c": 2 },
-      { "q": "Which popular Indian flatbread is traditionally baked inside a clay oven called a tandoor?", "a": ["Roti", "Naan", "Paratha", "Puri"], "c": 1 },
-      { "q": "Which major festival in Gujarat features nine nights of energetic dancing using wooden sticks called Dandiya?", "a": ["Navratri", "Uttarayan", "Diwali", "Holi"], "c": 0 },
-      { "q": "What is the capital of Tamil Nadu, formerly known as Madras?", "a": ["Madurai", "Coimbatore", "Chennai", "Kochi"], "c": 2 },
-      { "q": "Which iconic Indian street snack consists of a spiced potato patty fried inside a flour casing, shaped like a triangle?", "a": ["Kachori", "Samosa", "Pakoda", "Spring Roll"], "c": 1 },
-      { "q": "Which language is prominently spoken in the state of Maharashtra?", "a": ["Hindi", "Gujarati", "Marathi", "Bengali"], "c": 2 },
-      { "q": "Which unique 5-story palace in Jaipur features hundreds of small windows designed for cool breeze?", "a": ["Umaid Bhawan", "Hawa Mahal", "City Palace", "Lake Palace"], "c": 1 },
-      { "q": "What is the capital city of Gujarat, named after the Father of the Nation?", "a": ["Ahmedabad", "Surat", "Gandhinagar", "Vadodara"], "c": 2 },
-      { "q": "Which staple South Indian breakfast combo features fluffy steamed rice cakes served with a lentil stew?", "a": ["Idli and Sambar", "Poha and Jalebi", "Chole Bhature", "Vada Pav"], "c": 0 },
-      { "q": "What is the capital of Punjab and Haryana, famously designed by the architect Le Corbusier?", "a": ["Amritsar", "Ludhiana", "Gurugram", "Chandigarh"], "c": 3 },
-      { "q": "Which spongy white dessert made from cottage cheese balls soaked in clear sugar syrup is a pride of West Bengal?", "a": ["Rasgulla", "Kaju Katli", "Mysore Pak", "Barfi"], "c": 0 },
-      { "q": "Which traditional Indian practice combining physical postures, breathing exercises, and meditation is celebrated globally on June 21?", "a": ["Ayurveda", "Yoga", "Kathak", "Kalaripayattu"], "c": 1 },
-      { "q": "What is the capital of the state of Goa?", "a": ["Margao", "Vasco da Gama", "Panaji", "Mapusa"], "c": 2 },
-      { "q": "Which Indian festival celebrates the deep bond of love and protection between brothers and sisters by tying a sacred thread?", "a": ["Bhai Dooj", "Raksha Bandhan", "Karwa Chauth", "Maha Shivratri"], "c": 1 },
-      { "q": "What popular Mumbai street food is affectionately dubbed the 'Indian Veg Burger'?", "a": ["Misal Pav", "Vada Pav", "Pav Bhaji", "Bhel Puri"], "c": 1 },
-      { "q": "Which Indian state capital is nicknamed the 'City of Lakes' and located in Madhya Pradesh?", "a": ["Indore", "Bhopal", "Gwalior", "Jabalpur"], "c": 1 },
-      { "q": "Which stringed instrument, heavily popularized by Pandit Ravi Shankar, is an icon of traditional Indian music?", "a": ["Guitar", "Sitar", "Violin", "Flute"], "c": 1 },
-      { "q": "What is the capital city of Uttar Pradesh, widely known as the 'City of Nawabs'?", "a": ["Varanasi", "Agra", "Lucknow", "Kanpur"], "c": 2 },
-      { "q": "Which harvest festival is enthusiastically celebrated in Kerala with grand boat races and colorful floral carpets?", "a": ["Pongal", "Onam", "Bihu", "Lohri"], "c": 1 },
-      { "q": "What is the capital of Bihar, a city situated beautifully on the southern bank of the river Ganga?", "a": ["Gaya", "Patna", "Muzaffarpur", "Bhagalpur"], "c": 1 },
-      { "q": "Which Indian state is famously called the 'Land of Five Rivers' and is known for its energetic Bhangra dance?", "a": ["Haryana", "Rajasthan", "Punjab", "Gujarat"], "c": 2 },
-      { "q": "What is the capital of Jammu and Kashmir during the breezy summer season?", "a": ["Jammu", "Srinagar", "Leh", "Gulmarg"], "c": 1 },
-      { "q": "Which ancient Indian art style utilizes organic colors to create geometric village scenes, originating in Maharashtra?", "a": ["Madhubani", "Warli", "Kalamkari", "Pattachitra"], "c": 1 },
-      { "q": "What is the capital city of Kerala, located near the southern tip of mainland India?", "a": ["Kochi", "Kozhikode", "Thiruvananthapuram", "Thrissur"], "c": 2 },
-      { "q": "Which traditional North Indian meal features heavily spiced chickpeas served alongside large, fluffy deep-fried bread?", "a": ["Chole Bhature", "Dal Makhani", "Alu Paratha", "Kadhi Chawal"], "c": 0 },
-      { "q": "What is the capital city of Odisha, famously known as the 'Temple City of India'?", "a": ["Cuttack", "Puri", "Bhubaneswar", "Rourkela"], "c": 2 },
-      { "q": "Which classical dance form from Tamil Nadu is known for its fixated geometric poses and fast, rhythmic footwork?", "a": ["Kathak", "Bharatanatyam", "Kuchipudi", "Odissi"], "c": 1 },
-      { "q": "What is the capital of Assam, the state heavily renowned for its premium quality tea gardens?", "a": ["Guwahati", "Dispur", "Silchar", "Dibrugarh"], "c": 1 },
-      { "q": "Which famous traditional garment for men features a long knee-length tunic shirt, typically paired with a pajama or churidar?", "a": ["Sherwani", "Kurta", "Dhoti", "Lungi"], "c": 1 },
-      { "q": "What is the capital city of Telangana, a major global hub for technology and pharmaceuticals?", "a": ["Warangal", "Nizamabad", "Hyderabad", "Khammam"], "c": 2 },
-      { "q": "Which major autumn festival celebrates the victory of Lord Rama over Ravana, culminating in burning giant effigies?", "a": ["Dussehra", "Holi", "Rakhi", "Janmashtami"], "c": 0 },
-      { "q": "What is the capital of Himachal Pradesh, which served as the official summer capital of British India?", "a": ["Manali", "Dharamshala", "Shimla", "Kullu"], "c": 2 },
-      { "q": "Which popular Indian spice, giving curries their distinct yellow color, is globally revered for its medicinal properties?", "a": ["Cumin", "Turmeric", "Cardamom", "Cinnamon"], "c": 1 },
-      { "q": "What is the capital of Uttarakhand, located peacefully in the scenic Doon Valley?", "a": ["Nainital", "Mussoorie", "Dehradun", "Rishikesh"], "c": 2 },
-      { "q": "Which massive open-air laundry in Mumbai is globally famous for its rows of concrete wash pens and manual washers?", "a": ["Chor Bazaar", "Dhobi Ghat", "Crawford Market", "Colaba Causeway"], "c": 1 },
-      { "q": "What is the capital city of Andhra Pradesh?", "a": ["Vijayawada", "Visakhapatnam", "Amaravati", "Tirupati"], "c": 2 },
-      { "q": "Which sweet dairy dish made of thick, strained yogurt flavored with saffron and cardamom is a popular dessert in Maharashtra and Gujarat?", "a": ["Rabdi", "Shrikhand", "Kheer", "Rasmalai"], "c": 1 },
-      { "q": "Which global culinary favorite, featuring raw fish placed over seasoned vinegared rice, originates from Japan?", "a": ["Kimchi", "Sushi", "Dim Sum", "Pad Thai"], "c": 1 },
-      { "q": "What is the capital city of Japan, known for its mix of ultra-modern skyscrapers and historic shrines?", "a": ["Kyoto", "Osaka", "Tokyo", "Hiroshima"], "c": 2 },
-      { "q": "Which popular garment, consisting of a single piece of cloth wrapped securely around the waist like a skirt, is worn across many Pacific Islands?", "a": ["Saree", "Sarong / Lava-lava", "Kimono", "Hanbok"], "c": 1 },
-      { "q": "What spicy, fermented cabbage and vegetable dish is served with almost every traditional meal in South Korea?", "a": ["Sushi", "Kimchi", "Ramen", "Dumplings"], "c": 1 },
-      { "q": "What is the capital city of South Korea, a booming global hub for tech and K-pop culture?", "a": ["Busan", "Incheon", "Seoul", "Daegu"], "c": 2 },
-      { "q": "Which traditional Japanese loose-fitting robe with wide sleeves is worn during special festivals and tea ceremonies?", "a": ["Hanbok", "Kimono", "Ao Dai", "Cheongsam"], "c": 1 },
-      { "q": "What is the capital city of Australia, purpose-built to serve as the nation's political center?", "a": ["Sydney", "Melbourne", "Canberra", "Brisbane"], "c": 2 },
-      { "q": "Which iconic, energetic pre-match dance is performed by New Zealand's rugby teams to honor Maori cultural heritage?", "a": ["Hula", "Haka", "Siva Tau", "Saman"], "c": 1 },
-      { "q": "What is the capital city of New Zealand?", "a": ["Auckland", "Christchurch", "Wellington", "Queenstown"], "c": 2 },
-      { "q": "Which world-famous ancient Buddhist temple complex features hundreds of bell-shaped stupas on the island of Java in Indonesia?", "a": ["Angkor Wat", "Borobudur", "Bagan", "Wat Arun"], "c": 1 },
-      { "q": "What is the capital city of Indonesia?", "a": ["Jakarta", "Bali", "Surabaya", "Bandung"], "c": 0 },
-      { "q": "Which world-famous massive temple complex in Cambodia stands out as the largest religious monument on Earth?", "a": ["Borobudur", "Angkor Wat", "Wat Phra Kaew", "Sanchi Stupa"], "c": 1 },
-      { "q": "What is the capital city of Thailand, famously known for its vibrant street life and ornate shrines?", "a": ["Phuket", "Bangkok", "Chiang Mai", "Pattaya"], "c": 1 },
-      { "q": "Which unique paper-folding art form, creating animals and shapes without cutting, originates from Japan?", "a": ["Ikebana", "Origami", "Bonsai", "Calligraphy"], "c": 1 },
-      { "q": "What is the capital city of the Philippines?", "a": ["Cebu", "Manila", "Davao", "Quezon City"], "c": 1 },
-      { "q": "Which elegant, high-necked silk dress featuring a distinct side slit is a well-known traditional garment in China?", "a": ["Kimono", "Cheongsam / Qipao", "Hanbok", "Saree"], "c": 1 },
-      { "q": "What is the capital city of China?", "a": ["Shanghai", "Hong Kong", "Beijing", "Guangzhou"], "c": 2 },
-      { "q": "Which global favorite Thai noodle dish is stir-fried with tofu, bean sprouts, peanuts, and egg?", "a": ["Ramen", "Pad Thai", "Pho", "Laksa"], "c": 1 },
-      { "q": "What is the capital city of Malaysia, home to the iconic Petronas Twin Towers?", "a": ["Penang", "Kuala Lumpur", "Malacca", "Johor Bahru"], "c": 1 },
-      { "q": "Which country is internationally famous for its 'Tea Ceremony', a deeply meditative cultural ritual of preparing green tea?", "a": ["Japan", "India", "Australia", "Philippines"], "c": 0 },
-      { "q": "What is the capital city of Vietnam?", "a": ["Ho Chi Minh City", "Hanoi", "Da Nang", "Hue"], "c": 1 },
-      { "q": "Which popular Southeast Asian fruit is famous for its large size, thorny outer shell, and very strong smell?", "a": ["Mango", "Durian", "Dragon Fruit", "Papaya"], "c": 1 },
-      { "q": "What is the capital city of Singapore?", "a": ["Singapore", "Kuala Lumpur", "Manila", "Jakarta"], "c": 0 },
-      { "q": "Which beloved Vietnamese noodle soup features a rich clear broth, rice noodles, herbs, and thinly sliced meat?", "a": ["Ramen", "Pho", "Pad Thai", "Laksa"], "c": 1 },
-      { "q": "What is the capital city of Sri Lanka, serving as its primary executive and judicial center?", "a": ["Kandy", "Colombo", "Galle", "Jaffna"], "c": 1 },
-      { "q": "Which popular Australian snack spreads a savory, dark brown yeast extract paste thinly over buttered toast?", "a": ["Nutella", "Vegemite", "Peanut Butter", "Hummus"], "c": 1 },
-      { "q": "What is the capital city of Bangladesh?", "a": ["Chattogram", "Dhaka", "Sylhet", "Khulna"], "c": 1 },
-      { "q": "Which traditional art form from Japan involves cultivating miniature trees in small containers to mimic full-sized trees?", "a": ["Origami", "Bonsai", "Ikebana", "Anime"], "c": 1 },
-      { "q": "What is the capital city of Nepal, situated high up in a valley near the majestic Himalayas?", "a": ["Pokhara", "Kathmandu", "Lalitpur", "Thimphu"], "c": 1 },
-      { "q": "Which major multi-day island festival features Thai locals splashing water on each other to celebrate the traditional New Year?", "a": ["Songkran", "Lantern Festival", "Moon Festival", "Chuseok"], "c": 0 },
-      { "q": "What is the capital city of the scenic island nation of Fiji?", "a": ["Nadi", "Suva", "Lautoka", "Labasa"], "c": 1 },
-      { "q": "Which famous multi-day autumn harvest festival in South Korea sees families gather to make half-moon shaped rice cakes?", "a": ["Songkran", "Chuseok", "Holi", "Golden Week"], "c": 1 },
-      { "q": "What is the capital city of Pakistan?", "a": ["Karachi", "Lahore", "Islamabad", "Rawalpindi"], "c": 2 },
-      { "q": "Which iconic native animal from Australia carries its young inside a pocket-like abdominal pouch?", "a": ["Koala", "Kangaroo", "Platypus", "Wombat"], "c": 1 },
-      { "q": "What is the capital city of Taiwan?", "a": ["Kaohsiung", "Taipei", "Taichung", "Tainan"], "c": 1 },
-      { "q": "Which traditional garment featuring a long split tunic over flowing silk trousers serves as the national costume of Vietnam?", "a": ["Ao Dai", "Hanbok", "Kimono", "Saree"], "c": 0 },
-      { "q": "What is the capital city of Mongolia?", "a": ["Ulaanbaatar", "Astana", "Tashkent", "Baku"], "c": 0 },
-      { "q": "Which ancient, highly stylized art form of Japanese floral design translates to 'arranging flowers' or 'making flowers alive'?", "a": ["Origami", "Ikebana", "Bonsai", "Kabuki"], "c": 1 },
-      { "q": "What is the capital city of the Himalayan kingdom of Bhutan?", "a": ["Kathmandu", "Thimphu", "Paro", "Punakha"], "c": 1 },
-      { "q": "Which massive Lunar New Year ritual across multiple East Asian countries involves performing athletic dances inside oversized, colorful puppet costumes?", "a": ["Haka Dance", "Lion and Dragon Dances", "Flamenco Dance", "Kathakali"], "c": 1 }
-    ];
-
+    let allQuestions = [];
     let gameQuestions = [];
     let currentIdx = 0;
     let score = 0;
     let timeLeft = 60;
     let timerInterval;
+    let nameInput = "Anonymous";
 
-    function startQuiz() {
-        // Absolute Shuffle and pick exactly 15 questions directly from memory
-        gameQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
-        
-        document.getElementById('start-screen').style.display = 'none';
-        document.getElementById('meta-info').style.display = 'flex';
-        document.getElementById('timer-bar').style.display = 'block';
-        document.getElementById('question-container').style.display = 'block';
-        
-        showQuestion();
-        startTimer();
+    async function startQuiz() {
+        const entry = document.getElementById('player-name').value.trim();
+        if (entry !== "") {
+            nameInput = entry;
+        }
+
+        try {
+            // Absolute fix for GitHub caching paths on active networks
+            const response = await fetch('questions.json', { cache: "no-store" });
+            allQuestions = await response.json();
+            
+            // Pick 15 completely random questions from the 100-master bank
+            gameQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
+            
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('meta-info').style.display = 'flex';
+            document.getElementById('timer-bar').style.display = 'block';
+            document.getElementById('question-container').style.display = 'block';
+            
+            showQuestion();
+            startTimer();
+        } catch (err) {
+            alert("Configuration error: Make sure questions.json is committed in the main repository folder!");
+            console.error(err);
+        }
     }
 
     function showQuestion() {
@@ -235,6 +155,7 @@
         document.getElementById('timer-bar').style.display = 'none';
         document.getElementById('question-container').style.display = 'none';
         
+        document.getElementById('result-player').innerText = `${nameInput}'s Final Score`;
         document.getElementById('final-score').innerText = `${score}/15`;
         let badge = document.getElementById('prize-badge');
         
@@ -242,4 +163,12 @@
             badge.className = "badge win";
             badge.innerText = "🎉 CLAIM YOUR GOODIE!";
         } else {
-            badge.className = "badge lost
+            badge.className = "badge lost";
+            badge.innerText = "Thank you for playing! ✨";
+        }
+        
+        document.getElementById('result-screen').style.display = 'block';
+    }
+</script>
+</body>
+</html>

@@ -9,36 +9,55 @@
             --primary: #0f172a;
             --accent: #2563eb;
             --success: #16a34a;
+            --error: #ef4444;
             --text: #334155;
             --bg: #f8fafc;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background: var(--bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
-        .card { background: white; width: 100%; max-width: 500px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; }
-        h1 { color: var(--primary); font-size: 24px; margin-bottom: 8px; }
-        h2 { font-size: 14px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
-        .btn { background: var(--accent); color: white; border: none; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; transition: background 0.2s; }
-        .btn:hover { background: #1d4ed8; }
+        body { background: var(--bg); color: var(--text); padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .card { background: white; width: 100%; max-width: 550px; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); text-align: center; margin-bottom: 25px; }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 { font-size: 13px; color: #64748b; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; }
+        .input-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+        input[type="text"] { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 16px; outline: none; }
+        input[type="text"]:focus { border-color: var(--accent); }
+        .btn { background: var(--accent); color: white; border: none; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; }
+        .btn:disabled { background: #94a3b8; cursor: not-allowed; }
         .timer-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 24px; overflow: hidden; display: none; }
         .timer-fill { height: 100%; width: 100%; background: #ef4444; transition: width 1s linear; }
         .meta-info { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: #64748b; margin-bottom: 16px; display: none; }
         .question-text { font-size: 18px; font-weight: 600; color: var(--primary); text-align: left; margin-bottom: 20px; line-height: 1.5; }
         .options-grid { display: grid; gap: 12px; margin-bottom: 20px; }
-        .option-btn { background: #f1f5f9; border: 2px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: left; font-size: 15px; cursor: pointer; transition: all 0.15s; font-weight: 500; color: var(--text); }
-        .option-btn:hover { background: #e2e8f0; border-color: #cbd5e1; }
+        .option-btn { background: #f1f5f9; border: 2px solid #e2e8f0; padding: 14px; border-radius: 8px; text-align: left; font-size: 15px; cursor: pointer; color: var(--text); }
         .badge { display: inline-block; padding: 12px 24px; border-radius: 50px; font-weight: 700; margin-top: 15px; font-size: 18px; }
         .badge.win { background: #dcfce7; color: #15803d; border: 2px dashed #22c55e; }
-        .badge.lost { background: #fef3c7; color: #b45309; }
+        .badge.lost { background: #fee2e2; color: #b91c1c; }
+        
+        .leaderboard-box { width: 100%; max-width: 550px; background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .leaderboard-title { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 15px; text-align: left; }
+        .leaderboard-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .leaderboard-table th { font-size: 12px; text-transform: uppercase; color: #64748b; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; }
+        .leaderboard-table td { padding: 12px 0; border-bottom: 1px solid #f1f5f9; font-size: 15px; }
+        .rank-badge { display: inline-block; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; font-weight: 700; font-size: 13px; }
+        .rank-1 { background: #fef08a; color: #854d0e; }
+        .rank-2 { background: #e2e8f0; color: #475569; }
+        .rank-3 { background: #ffedd5; color: #9a3412; }
     </style>
 </head>
 <body>
 
-<div class="card" id="quiz-card">
-    <div id="start-screen">
+<div class="card">
+    <div id="register-screen">
         <h1>APAC-CAN</h1>
-        <h2>Cultural Awareness Network Quiz</h2>
-        <p style="margin-bottom: 24px; color: #475569; line-height: 1.6;">Test your knowledge on Indian culture, tricky state capitals, and APAC traditions! You have <b>1 minute</b> to tackle <b>15 random questions</b>. Score 10 or more to win a prize!</p>
-        <button class="btn" onclick="startQuiz()">Start Challenge</button>
+        <h2>Cultural Awareness Quiz</h2>
+        <p style="margin-bottom: 20px; color: #475569; line-height: 1.5; font-size: 15px;">Welcome! You have <b>60 seconds</b> to complete <b>15 randomized questions</b>. Duplicates are blocked, so bring your best attempt!</p>
+        
+        <div class="input-group">
+            <label for="player-name">Enter Full Name / Employee ID:</label>
+            <input type="text" id="player-name" placeholder="e.g., Ruchi Agrawal" autocomplete="off">
+        </div>
+        <button class="btn" id="start-btn" onclick="validateAndStart()">Launch Quiz</button>
     </div>
 
     <div class="meta-info" id="meta-info">
@@ -46,37 +65,84 @@
         <span id="timer-text">60s left</span>
     </div>
     <div class="timer-bar" id="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
+    
     <div id="question-container" style="display: none;">
         <div class="question-text" id="question-text"></div>
         <div class="options-grid" id="options-grid"></div>
     </div>
 
     <div id="result-screen" style="display: none;">
-        <h1>Challenge Finished!</h1>
-        <p style="font-size: 16px; margin: 16px 0 8px 0; color: #475569;">Your Final Score</p>
-        <div style="font-size: 48px; font-weight: 800; color: var(--primary);" id="final-score">0/15</div>
+        <h1>Challenge Complete!</h1>
+        <p id="player-ack" style="font-size: 16px; margin-top: 10px; color: #475569; font-weight: 600;"></p>
+        <div style="font-size: 48px; font-weight: 800; color: var(--primary); margin: 15px 0;" id="final-score">0/15</div>
+        <div id="time-taken" style="font-size: 14px; color: #64748b; margin-bottom: 15px;"></div>
         <div id="prize-badge"></div>
-        <button class="btn" style="margin-top: 30px; background: #64748b;" onclick="location.reload()">Next Player</button>
+        <p style="margin-top: 20px; font-size: 13px; color: #64748b;">Scroll down to see where you stand on the global leaderboard!</p>
     </div>
 </div>
 
+<div class="leaderboard-box" id="leaderboard-view" style="display: none;">
+    <div class="leaderboard-title">Global Live Standings</div>
+    <table class="leaderboard-table">
+        <thead>
+            <tr>
+                <th style="width: 15%">Rank</th>
+                <th style="width: 50%">Participant</th>
+                <th style="width: 15%">Score</th>
+                <th style="width: 20%">Time</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard-rows">
+            <tr><td colspan="4" style="text-align: center; color: #94a3b8; padding: 20px;">Loading live standings...</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <script>
+    // ⚠️ PASTE YOUR GENERATED SHEET BEST API URL BETWEEN THE QUOTES BELOW:
+    const DATABASE_URL = "https://api.sheetbest.com/sheets/ca8a3c86-36f6-4fc2-87ec-f9490744d189";
+
     let allQuestions = [];
     let gameQuestions = [];
     let currentIdx = 0;
     let score = 0;
     let timeLeft = 60;
     let timerInterval;
+    let currentPlayer = "";
 
-    async function startQuiz() {
+    async function validateAndStart() {
+        const nameInput = document.getElementById('player-name').value.trim();
+        const startBtn = document.getElementById('start-btn');
+        
+        if (!nameInput) {
+            alert("⚠️ Please enter your name or Employee ID to begin!");
+            return;
+        }
+
+        startBtn.disabled = true;
+        startBtn.innerText = "Checking entries...";
+
         try {
-            const response = await fetch('questions.json');
-            allQuestions = await response.json();
+            // Check Google Sheets database for duplicates
+            const checkRes = await fetch(DATABASE_URL);
+            const records = await checkRes.json();
             
-            // Absolute Shuffle and pick exactly 15 questions
+            let duplicate = records.find(r => String(r.name).toLowerCase() === nameInput.toLowerCase());
+            if (duplicate) {
+                alert(`❌ Denied: An entry under "${nameInput}" already exists on the leaderboard!`);
+                startBtn.disabled = false;
+                startBtn.innerText = "Launch Quiz";
+                return;
+            }
+
+            currentPlayer = nameInput;
+
+            // Load and initialize the quiz questions
+            const qRes = await fetch('questions.json');
+            allQuestions = await qRes.json();
             gameQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
             
-            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('register-screen').style.display = 'none';
             document.getElementById('meta-info').style.display = 'flex';
             document.getElementById('timer-bar').style.display = 'block';
             document.getElementById('question-container').style.display = 'block';
@@ -84,7 +150,9 @@
             showQuestion();
             startTimer();
         } catch (err) {
-            alert("Error loading questions. Make sure questions.json is in the same folder!");
+            alert("Network error. Make sure your DATABASE_URL is pasted correctly inside the code!");
+            startBtn.disabled = false;
+            startBtn.innerText = "Launch Quiz";
         }
     }
 
@@ -133,24 +201,76 @@
         }, 1000);
     }
 
-    function endQuiz() {
+    async function endQuiz() {
         clearInterval(timerInterval);
+        let completionTime = 60 - timeLeft;
+        
         document.getElementById('meta-info').style.display = 'none';
         document.getElementById('timer-bar').style.display = 'none';
         document.getElementById('question-container').style.display = 'none';
         
+        document.getElementById('player-ack').innerText = `Thanks for playing, ${currentPlayer}!`;
         document.getElementById('final-score').innerText = `${score}/15`;
-        let badge = document.getElementById('prize-badge');
+        document.getElementById('time-taken').innerText = `Completed in ${completionTime} seconds`;
         
+        let badge = document.getElementById('prize-badge');
         if (score >= 10) {
             badge.className = "badge win";
-            badge.innerText = "🎉 CLAIM YOUR GOODIE!";
+            badge.innerText = "🏆 TOP TIER ATTEMPT!";
         } else {
             badge.className = "badge lost";
-            badge.innerText = "Thank you for playing! ✨";
+            badge.innerText = "Nice attempt!";
         }
         
         document.getElementById('result-screen').style.display = 'block';
+        document.getElementById('leaderboard-view').style.display = 'block';
+
+        // Post score details to Google Sheets database
+        try {
+            await fetch(DATABASE_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: currentPlayer, score: score, time: completionTime })
+            });
+            fetchAndRenderLeaderboard();
+        } catch (e) {
+            console.error("Failed to save score to spreadsheet.");
+        }
+    }
+
+    async function fetchAndRenderLeaderboard() {
+        try {
+            const res = await fetch(DATABASE_URL);
+            let records = await res.json();
+            
+            // Sorting Logic: Highest score first. Ties broken by fastest completion time!
+            records.sort((a, b) => {
+                if (Number(b.score) !== Number(a.score)) return Number(b.score) - Number(a.score);
+                return Number(a.time) - Number(b.time);
+            });
+            
+            let tbody = document.getElementById('leaderboard-rows');
+            tbody.innerHTML = '';
+            
+            records.forEach((record, idx) => {
+                let row = document.createElement('tr');
+                let rankDisplay = idx + 1;
+                
+                if (idx === 0) rankDisplay = `<span class="rank-badge rank-1">1</span>`;
+                else if (idx === 1) rankDisplay = `<span class="rank-badge rank-2">2</span>`;
+                else if (idx === 2) rankDisplay = `<span class="rank-badge rank-3">3</span>`;
+                
+                row.innerHTML = `
+                    <td>${rankDisplay}</td>
+                    <td style="font-weight: 600; color: var(--primary);">${record.name}</td>
+                    <td style="font-weight: 700; color: var(--accent);">${record.score}/15</td>
+                    <td>${record.time}s</td>
+                `;
+                tbody.appendChild(row);
+            });
+        } catch (err) {
+            document.getElementById('leaderboard-rows').innerHTML = `<tr><td colspan="4" style="text-align: center; color: var(--error);">Error retrieving live standings.</td></tr>`;
+        }
     }
 </script>
 </body>

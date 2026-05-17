@@ -109,6 +109,7 @@
     let timeLeft = 60;
     let timerInterval;
     let currentPlayer = "";
+    let fallbackRecords = []; // Backs up data locally if the sheet fails
 
     async function validateAndStart() {
         const nameInput = document.getElementById('player-name').value.trim();
@@ -122,22 +123,31 @@
         startBtn.disabled = true;
         startBtn.innerText = "Checking entries...";
 
+        let records = [];
         try {
-            // Check Google Sheets database for duplicates
+            // Attempt to read from the Google Sheet
             const checkRes = await fetch(DATABASE_URL);
-            const records = await checkRes.json();
-            
-            let duplicate = records.find(r => String(r.name).toLowerCase() === nameInput.toLowerCase());
-            if (duplicate) {
-                alert(`❌ Denied: An entry under "${nameInput}" already exists on the leaderboard!`);
-                startBtn.disabled = false;
-                startBtn.innerText = "Launch Quiz";
-                return;
-            }
+            if (!checkRes.ok) throw new Error("Database connection rejected");
+            records = await checkRes.json();
+        } catch (err) {
+            console.warn("Database URL issue, switching to local stall validation fallback.", err);
+            // Use local history backup if the sheet is temporarily unresponsive
+            records = fallbackRecords; 
+        }
+        
+        // Check for duplicates
+        let duplicate = records.find(r => r && r.name && String(r.name).toLowerCase() === nameInput.toLowerCase());
+        if (duplicate) {
+            alert(`❌ Denied: An entry under "${nameInput}" already exists!`);
+            startBtn.disabled = false;
+            startBtn.innerText = "Launch Quiz";
+            return;
+        }
 
-            currentPlayer = nameInput;
+        currentPlayer = nameInput;
 
-            // Load and initialize the quiz questions
+        // Load the quiz questions
+        try {
             const qRes = await fetch('questions.json');
             allQuestions = await qRes.json();
             gameQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 15);
@@ -150,7 +160,7 @@
             showQuestion();
             startTimer();
         } catch (err) {
-            alert("Network error. Make sure your DATABASE_URL is pasted correctly inside the code!");
+            alert("Error loading questions.json. Check that the file exists in your repository root!");
             startBtn.disabled = false;
             startBtn.innerText = "Launch Quiz";
         }
@@ -225,52 +235,64 @@
         document.getElementById('result-screen').style.display = 'block';
         document.getElementById('leaderboard-view').style.display = 'block';
 
-        // Post score details to Google Sheets database
+        // Post score details to the database
+        let payload = { name: currentPlayer, score: score, time: completionTime };
+        fallbackRecords.push(payload); // Track locally just in case
+
         try {
             await fetch(DATABASE_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: currentPlayer, score: score, time: completionTime })
+                body: JSON.stringify(payload)
             });
-            fetchAndRenderLeaderboard();
         } catch (e) {
-            console.error("Failed to save score to spreadsheet.");
+            console.error("Could not reach remote sheet to save score.");
         }
+        
+        fetchAndRenderLeaderboard();
     }
 
     async function fetchAndRenderLeaderboard() {
+        let records = [];
         try {
             const res = await fetch(DATABASE_URL);
-            let records = await res.json();
-            
-            // Sorting Logic: Highest score first. Ties broken by fastest completion time!
-            records.sort((a, b) => {
-                if (Number(b.score) !== Number(a.score)) return Number(b.score) - Number(a.score);
-                return Number(a.time) - Number(b.time);
-            });
-            
-            let tbody = document.getElementById('leaderboard-rows');
-            tbody.innerHTML = '';
-            
-            records.forEach((record, idx) => {
-                let row = document.createElement('tr');
-                let rankDisplay = idx + 1;
-                
-                if (idx === 0) rankDisplay = `<span class="rank-badge rank-1">1</span>`;
-                else if (idx === 1) rankDisplay = `<span class="rank-badge rank-2">2</span>`;
-                else if (idx === 2) rankDisplay = `<span class="rank-badge rank-3">3</span>`;
-                
-                row.innerHTML = `
-                    <td>${rankDisplay}</td>
-                    <td style="font-weight: 600; color: var(--primary);">${record.name}</td>
-                    <td style="font-weight: 700; color: var(--accent);">${record.score}/15</td>
-                    <td>${record.time}s</td>
-                `;
-                tbody.appendChild(row);
-            });
+            records = await res.json();
+            if(!Array.isArray(records)) records = fallbackRecords;
         } catch (err) {
-            document.getElementById('leaderboard-rows').innerHTML = `<tr><td colspan="4" style="text-align: center; color: var(--error);">Error retrieving live standings.</td></tr>`;
+            records = fallbackRecords;
         }
+        
+        // Sorting Logic: Highest score first, fast times break ties
+        records.sort((a, b) => {
+            if (Number(b.score) !== Number(a.score)) return Number(b.score) - Number(a.score);
+            return Number(a.time) - Number(b.time);
+        });
+        
+        let tbody = document.getElementById('leaderboard-rows');
+        tbody.innerHTML = '';
+        
+        if (records.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; color: #94a3b8; padding: 20px;">No entries logged yet!</td></tr>`;
+            return;
+        }
+        
+        records.forEach((record, idx) => {
+            if(!record || !record.name) return; // Skip malformed rows
+            let row = document.createElement('tr');
+            let rankDisplay = idx + 1;
+            
+            if (idx === 0) rankDisplay = `<span class="rank-badge rank-1">1</span>`;
+            else if (idx === 1) rankDisplay = `<span class="rank-badge rank-2">2</span>`;
+            else if (idx === 2) rankDisplay = `<span class="rank-badge rank-3">3</span>`;
+            
+            row.innerHTML = `
+                <td>${rankDisplay}</td>
+                <td style="font-weight: 600; color: var(--primary);">${record.name}</td>
+                <td style="font-weight: 700; color: var(--accent);">${record.score}/15</td>
+                <td>${record.time}s</td>
+            `;
+            tbody.appendChild(row);
+        });
     }
 </script>
 </body>

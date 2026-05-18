@@ -74,7 +74,7 @@
     let gameQuestions = [];
     let currentIdx = 0;
     let score = 0;
-    let timeLeft = 60;
+    let timeLeft = 90;
     let timerInterval;
     let nameInput = "Anonymous";
 
@@ -142,7 +142,7 @@
         timerInterval = setInterval(() => {
             timeLeft--;
             txt.innerText = `${timeLeft}s left`;
-            fill.style.width = `${(timeLeft / 60) * 100}%`;
+            fill.style.width = `${(timeLeft / 90) * 100}%`;
             
             if (timeLeft <= 0) {
                 endQuiz();
